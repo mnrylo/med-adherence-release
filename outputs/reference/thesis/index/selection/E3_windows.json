@@ -1,0 +1,43 @@
+{
+ "stage": "E3 short-window references",
+ "created": "2026-10-19T02:45:38",
+ "windows": [
+  0.75,
+  1.0
+ ],
+ "rule": "per track: A -> B -> C -> F as in sweep.py; the best stage-F configuration goes to E3",
+ "configs": {
+  "E1_w075": {
+   "experiment": "E1",
+   "window_s": 0.75,
+   "config_key": "cnn_bilstm__fs100_w075_ov75_acc_raw__hp25",
+   "stage_a_signal": "cnn_bilstm__fs100_w075_ov75_acc_raw__hpdef",
+   "val.timeline.seg_f1_25": 0.2514006565470807,
+   "val.window.macro_f1": 0.3207828064118989
+  },
+  "E1_w100": {
+   "experiment": "E1",
+   "window_s": 1.0,
+   "config_key": "cnn__fs100_w100_ov50_acc_raw__hp03",
+   "stage_a_signal": "cnn_bilstm__fs100_w100_ov50_acc_raw__hpdef",
+   "val.timeline.seg_f1_25": 0.276254828215134,
+   "val.window.macro_f1": 0.3341724246997606
+  },
+  "E2_w075": {
+   "experiment": "E2",
+   "window_s": 0.75,
+   "config_key": "cnn__fs100_w075_ov75_accgyr_hp03__hpdef",
+   "stage_a_signal": "cnn_bilstm__fs100_w075_ov75_accgyr_hp03__hpdef",
+   "val.timeline.seg_f1_25": 0.6774039393249457,
+   "val.window.macro_f1": 0.7364471884938868
+  },
+  "E2_w100": {
+   "experiment": "E2",
+   "window_s": 1.0,
+   "config_key": "cnn__fs100_w100_ov50_accgyr_hp03__hpdef",
+   "stage_a_signal": "cnn_bilstm__fs100_w100_ov50_accgyr_hp03__hpdef",
+   "val.timeline.seg_f1_25": 0.7420955526067601,
+   "val.window.macro_f1": 0.7645552154646041
+  }
+ }
+}

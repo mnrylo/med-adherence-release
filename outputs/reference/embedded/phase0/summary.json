@@ -1,0 +1,97 @@
+{
+ "created": "2026-10-21T20:06:39",
+ "config_key": "cnn_bilstm__fs100_w200_ov75_accgyr_hp03__hp05",
+ "causal_key": "cnn_bilstm__fs100_w200_ov75_accgyr_hp03c__hp05",
+ "variants": [
+  "zerophase",
+  "causal",
+  "causal_trained",
+  "causal_trained_fp16",
+  "causal_trained_fp32",
+  "causal_trained_int8_dynamic",
+  "causal_trained_int8_dynamic_b1"
+ ],
+ "streaming_variant": "causal_trained_int8_dynamic_b1",
+ "decoder_params": {
+  "decoder": "hmm",
+  "ov": 75,
+  "st": 0.95,
+  "md": 0.3,
+  "t": 2.0
+ },
+ "replicates": [
+  "f0_s0",
+  "f0_s1",
+  "f0_s2",
+  "f1_s0",
+  "f1_s1",
+  "f1_s2",
+  "f2_s0",
+  "f2_s1",
+  "f2_s2",
+  "fall_s0"
+ ],
+ "lags_s": [
+  "0",
+  "0.5",
+  "1",
+  "2",
+  "3",
+  "5",
+  "10",
+  "20",
+  "30",
+  "60",
+  "inf"
+ ],
+ "llr_steps_s": [
+  2,
+  5,
+  10
+ ],
+ "fixed_thresholds": {
+  "zerophase": {
+   "registry": {
+    "0.5": 1.2927170441067375,
+    "1.0": 0.9314026030546998
+   }
+  },
+  "causal": {
+   "registry": {
+    "0.5": 1.2927170441067375,
+    "1.0": 0.9314026030546998
+   }
+  },
+  "causal_trained": {
+   "fold_median": {
+    "0.5": 1.2979973705674155,
+    "1.0": 0.9934690007889344
+   }
+  },
+  "causal_trained_fp16": {
+   "fold_median": {
+    "0.5": 1.298039835421477,
+    "1.0": 0.9916158126816583
+   }
+  },
+  "causal_trained_fp32": {
+   "fold_median": {
+    "0.5": 1.2980354166769104,
+    "1.0": 0.9939524750928257
+   }
+  },
+  "causal_trained_int8_dynamic": {
+   "fold_median": {
+    "0.5": 1.2977704625878914,
+    "1.0": 1.0162933041294764
+   }
+  },
+  "causal_trained_int8_dynamic_b1": {
+   "fold_median": {
+    "0.5": 1.2980155778702027,
+    "1.0": 0.9940188989870364
+   }
+  }
+ },
+ "lookahead_s": 1.5
+}

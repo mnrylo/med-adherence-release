@@ -1,0 +1,125 @@
+{
+ "timeline": {
+  "hz": 10,
+  "construction": "each 0.1 s frame averages the softmax of every window covering it (window j centred on sample j x stride)"
+ },
+ "decoder": {
+  "key": "hmm__ov50_st080_md070_t400",
+  "decoder": "hmm",
+  "ov": 50,
+  "st": 0.8,
+  "md": 0.7,
+  "t": 4.0,
+  "emissions": "log(p / prior) per frame / temperature t",
+  "self_transition_meaning": "probability per second that rest (G5) continues (hmm only)",
+  "decode_every_nth_window": 1
+ },
+ "prior": [
+  0.17644594645993059,
+  0.19960691105733952,
+  0.18329709270596883,
+  0.2789696984568831,
+  0.16168035131987804
+ ],
+ "timeline_rule_min_s": [
+  0.526,
+  0.625,
+  0.4645000000000001,
+  0.705,
+  0.0
+ ],
+ "hmm_durations_10hz": {
+  "min_frames": [
+   7,
+   8,
+   6,
+   9,
+   6
+  ],
+  "p_stay": [
+   0.9562803608605135,
+   0.962791925056076,
+   0.94768,
+   0.9708757974977215,
+   0.9945136376607476
+  ]
+ },
+ "hsmm_log_normal_10hz": {
+  "G1": {
+   "mu": 3.239129732660797,
+   "sigma": 0.5239683731578343,
+   "p99_frames": 59.9716703470673
+  },
+  "G2": {
+   "mu": 3.3833288171018334,
+   "sigma": 0.5660547149993654,
+   "p99_frames": 72.18894011926321
+  },
+  "G3": {
+   "mu": 3.0408486245303683,
+   "sigma": 0.5609553869549788,
+   "p99_frames": 51.0
+  },
+  "G4": {
+   "mu": 3.574120940985896,
+   "sigma": 0.6576193026583518,
+   "p99_frames": 142.8354449760535
+  },
+  "G5": {
+   "mu": 4.520233480900858,
+   "sigma": 1.436205039078086,
+   "p99_frames": 850.1299335193355
+  }
+ },
+ "intake": {
+  "llr": {
+   "model": "HMM v2 phased intake vs no-intake (lib/hmm.py)",
+   "grid_hz": 2,
+   "episode_s": 40,
+   "episode_step_s": 10,
+   "hmm_params": {
+    "decoder": "hmm",
+    "ov": 50,
+    "st": 0.8,
+    "md": 0.7,
+    "t": 4.0
+   },
+   "thresholds": {
+    "fa05": 4.243704493449329,
+    "fa10": 3.762594159366543
+   },
+   "threshold_rule": "median over the 9 fold runs of the threshold with the best validation balanced accuracy under the false-event budget (per hour) on the external calibration participants"
+  },
+  "rules": {
+   "g3": "a G3 segment in the decoded timeline",
+   "g2_g3": "G2 followed later by G3"
+  }
+ },
+ "post_config": {
+  "min_duration_fraction": 0.5,
+  "background_expected_s": 5.0,
+  "skip": {
+   "G1": 0.3,
+   "G4_before": 0.8,
+   "G2": 0.3,
+   "G4_after": 0.5
+  },
+  "gap_prob": 0.7,
+  "start_in_background": 0.8,
+  "no_intake_g3_prob": 0.02,
+  "emission_floor": 0.0001,
+  "llr_threshold": 0.0,
+  "episode_s": 40,
+  "episode_step_s": 10,
+  "phased": {
+   "g3_entry": {
+    "none": 0.1,
+    "g1": 0.3,
+    "g2": 1.0
+   },
+   "g4_after_g3": 3.0,
+   "repeat_g3_weight": 1.0
+  },
+  "max_false_events_per_h": 1.0
+ }
+}

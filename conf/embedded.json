@@ -1,0 +1,18 @@
+{
+  "experiment": "E2",
+  "config_key": null,
+  "deploy_replicate": "fall_s0",
+  "folds": [0, 1, 2],
+  "seeds": [0, 1, 2],
+  "filter_variants": {
+    "zerophase": {"type": "highpass_acc", "cutoff": 0.3},
+    "causal": {"type": "highpass_acc", "cutoff": 0.3, "causal": true}
+  },
+  "campaign": {
+    "williams_seed": 20261101,
+    "repetition_status": {
+      "1": "pilot (fixed order)",
+      "2": "off-protocol (started at 56 %, 33-36 C)"
+    }
+  }
+}

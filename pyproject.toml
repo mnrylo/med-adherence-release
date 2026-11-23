@@ -1,0 +1,25 @@
+[project]
+name = "med-adherence-experiments"
+version = "1.0.0"
+description = "Wrist-IMU gesture recognition and medication-intake detection: experiments E1-E3, decoder study, embedded study"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy==2.2.6",
+    "pandas==2.3.3",
+    "scipy==1.15.3",
+    "scikit-learn==1.7.2",
+    "matplotlib==3.10.9",
+    "openpyxl==3.1.5",
+    "torch==2.14.1",
+    "onnx==1.23.2",
+    "onnxruntime==1.23.2",
+]
+
+[project.optional-dependencies]
+test = ["pytest==9.1.1"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
+markers = ["data: needs the annotated data in data/", "third_party: needs InGesture and WISDM in data/third_party/"]

@@ -1,0 +1,91 @@
+{
+ "phone": {
+  "device": {
+   "manufacturer": "samsung",
+   "model": "SM-S918B",
+   "device": "dm3q",
+   "hardware": "qcom",
+   "board": "kalama",
+   "soc_manufacturer": "QTI",
+   "soc_model": "SM8550",
+   "sdk": 36,
+   "release": "16",
+   "abis": [
+    "arm64-v8a",
+    "armeabi-v7a",
+    "armeabi"
+   ],
+   "cores": 8,
+   "max_memory_mb": 256
+  },
+  "cost": {
+   "elapsed_h": 1.0000600884783333,
+   "samples": 0,
+   "windows": 0,
+   "alarms": 0,
+   "cpu_s_per_h": 11.617301934004448,
+   "inference_us": {},
+   "stage_mean_us": {
+    "filter": 0,
+    "window": 0,
+    "inference": 0,
+    "timeline": 0,
+    "viterbi": 0,
+    "llr": 0,
+    "transport": 0
+   },
+   "pss_mb_max": 25.140625,
+   "pss_mb_mean": 24.690797899590162,
+   "tx_kib_per_h": 0.0,
+   "rx_kib_per_h": 0.0,
+   "charge_mah_per_h": 83.69755882120104,
+   "battery_pct_per_h": 1.9999416683680058,
+   "current_avg_ma": 72.17213114754098,
+   "current_now_ma_median": 86.0
+  }
+ },
+ "watch": {
+  "device": {
+   "manufacturer": "samsung",
+   "model": "SM-L715F",
+   "device": "projectv2ul",
+   "hardware": "qcom",
+   "board": "vienna",
+   "soc_manufacturer": "QTI",
+   "soc_model": "vienna",
+   "sdk": 37,
+   "release": "17",
+   "abis": [
+    "armeabi-v7a",
+    "armeabi"
+   ],
+   "cores": 5,
+   "max_memory_mb": 192
+  },
+  "cost": {
+   "elapsed_h": 1.0000687525266667,
+   "samples": 0,
+   "windows": 0,
+   "alarms": 0,
+   "cpu_s_per_h": 81.71238206727293,
+   "inference_us": {},
+   "stage_mean_us": {
+    "filter": 0,
+    "window": 0,
+    "inference": 0,
+    "timeline": 0,
+    "viterbi": 0,
+    "llr": 0,
+    "transport": 0
+   },
+   "pss_mb_max": 22.876953125,
+   "pss_mb_mean": 22.27219678534836,
+   "tx_kib_per_h": 0.0,
+   "rx_kib_per_h": 0.0,
+   "charge_mah_per_h": 26.54232906890409,
+   "battery_pct_per_h": 2.999924168583516,
+   "current_avg_ma": 28.30327868852459,
+   "current_now_ma_median": 25.0
+  }
+ }
+}

@@ -1,0 +1,17 @@
+{
+ "manufacturer": "samsung",
+ "model": "SM-L715F",
+ "device": "projectv2ul",
+ "hardware": "qcom",
+ "board": "vienna",
+ "soc_manufacturer": "QTI",
+ "soc_model": "vienna",
+ "sdk": 37,
+ "release": "17",
+ "abis": [
+  "armeabi-v7a",
+  "armeabi"
+ ],
+ "cores": 5,
+ "max_memory_mb": 192
+}

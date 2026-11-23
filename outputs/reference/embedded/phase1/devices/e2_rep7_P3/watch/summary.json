@@ -1,0 +1,62 @@
+{
+ "run_id": "e2_rep7_P3",
+ "role": "watch",
+ "elapsed_s": 3600.324491595,
+ "cpu_ms": 353319,
+ "samples": 360010,
+ "windows": 7199,
+ "alarms": 0,
+ "tx_bytes": 0,
+ "rx_bytes": 0,
+ "tx_msgs": 0,
+ "rx_msgs": 0,
+ "stages": {
+  "filter": {
+   "total_ms": 2536.645138,
+   "count": 360010,
+   "mean_us": 7.046040771089691
+  },
+  "window": {
+   "total_ms": 3096.189235,
+   "count": 7199,
+   "mean_us": 430.08601680788996
+  },
+  "inference": {
+   "total_ms": 246054.414054,
+   "count": 7199,
+   "mean_us": 34178.97125350743
+  },
+  "timeline": {
+   "total_ms": 1174.409872,
+   "count": 35985,
+   "mean_us": 32.63609481728498
+  },
+  "viterbi": {
+   "total_ms": 1090.766838,
+   "count": 35990,
+   "mean_us": 30.30749758266185
+  },
+  "llr": {
+   "total_ms": 19495.304431,
+   "count": 44979,
+   "mean_us": 433.4312552746838
+  },
+  "transport": {
+   "total_ms": 0,
+   "count": 0,
+   "mean_us": 0
+  }
+ },
+ "inference": {
+  "p50_us": 34038.021,
+  "p90_us": 39542.709,
+  "p95_us": 40041.042,
+  "p99_us": 41392.761,
+  "p100_us": 49227.395
+ },
+ "extra": {
+  "reason": "duration",
+  "reorder_max_pending": 0,
+  "imu_events": 719964
+ }
+}

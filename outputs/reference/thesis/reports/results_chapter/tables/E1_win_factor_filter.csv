@@ -1,0 +1,5 @@
+,mean,mean,mean,mean,mean,mean,std,std,std,std,std,std,n
+,val.window.macro_f1,test_sequences.window.macro_f1,test_wild.window.macro_f1,test_sequences.window.accuracy,test_external.external.gesture_events_per_hour,test_external.external.g3_events_per_hour,val.window.macro_f1,test_sequences.window.macro_f1,test_wild.window.macro_f1,test_sequences.window.accuracy,test_external.external.gesture_events_per_hour,test_external.external.g3_events_per_hour,
+filter,,,,,,,,,,,,,
+high-pass 0.3 Hz,0.30172571595803277,0.7543068780775016,0.3488658611181022,0.7575989709992257,878.7439126002059,268.8666697718228,0.04864237209095367,0.07465329038204395,0.051375640362063484,0.07295878252129727,435.76174837557386,147.96269358859723,360
+raw,0.3259989365783049,0.7685216481910007,0.3550095591274836,0.7901633984207551,688.3880099572006,267.09880089221485,0.05489633821734203,0.0853920453364675,0.06484030490353532,0.07087314724302254,324.5211579466855,138.47572397784282,360

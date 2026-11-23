@@ -1,0 +1,21 @@
+{
+ "run_id": "e2_rep1_C0",
+ "condition": "C0",
+ "source": "replay",
+ "set": "test_wild",
+ "pacing": "realtime",
+ "precision": "int8",
+ "steps": [
+  2
+ ],
+ "batch_ms": 100,
+ "link_batch_ms": 1000,
+ "sensors_on": false,
+ "duration_s": 3600,
+ "first_stream": 0,
+ "max_streams": 0,
+ "threads": 1,
+ "log_probs": false,
+ "metrics_period_s": 30,
+ "wake_lock": true
+}

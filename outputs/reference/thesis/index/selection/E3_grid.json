@@ -1,0 +1,852 @@
+{
+ "stage": "E3 grid",
+ "rule": "max mean val.timeline.seg_f1_25, tie-break val.timeline.macro_f1",
+ "plan_rule": {
+  "metric": "timeline.seg_f1_25",
+  "tie_breaker": "window.macro_f1",
+  "set": "validation",
+  "note": "The annotated sequences are evaluated once per frozen configuration and never drive a choice."
+ },
+ "configs": {
+  "E1_gestures_only/cnn__fs100_w100_ov50_acc_raw__hp03": {
+   "hmm": {
+    "decoder_key": "hmm__ov50_st080_md070_t400",
+    "params": {
+     "decoder": "hmm",
+     "ov": 50,
+     "st": 0.8,
+     "md": 0.7,
+     "t": 4.0
+    },
+    "val.timeline.seg_f1_25": 0.4172752234843274,
+    "val.timeline.macro_f1": 0.3877485942065674,
+    "top5": [
+     {
+      "decoder_key": "hmm__ov50_st080_md070_t400",
+      "val.timeline.seg_f1_25": 0.4172752234843274
+     },
+     {
+      "decoder_key": "hmm__ov00_st095_md070_t400",
+      "val.timeline.seg_f1_25": 0.4154425888823861
+     },
+     {
+      "decoder_key": "hmm__ov00_st095_md050_t400",
+      "val.timeline.seg_f1_25": 0.41540704395460426
+     },
+     {
+      "decoder_key": "hmm__ov50_st090_md070_t400",
+      "val.timeline.seg_f1_25": 0.4153300247146748
+     },
+     {
+      "decoder_key": "hmm__ov50_st080_md050_t400",
+      "val.timeline.seg_f1_25": 0.41528435492669014
+     }
+    ]
+   },
+   "hsmm": {
+    "decoder_key": "hsmm__ov50_md050_t400",
+    "params": {
+     "decoder": "hsmm",
+     "ov": 50,
+     "md": 0.5,
+     "t": 4.0
+    },
+    "val.timeline.seg_f1_25": 0.39939644415218234,
+    "val.timeline.macro_f1": 0.39491300944134566,
+    "top5": [
+     {
+      "decoder_key": "hsmm__ov50_md050_t400",
+      "val.timeline.seg_f1_25": 0.39939644415218234
+     },
+     {
+      "decoder_key": "hsmm__ov50_md070_t400",
+      "val.timeline.seg_f1_25": 0.399379186690723
+     },
+     {
+      "decoder_key": "hsmm__ov50_md030_t400",
+      "val.timeline.seg_f1_25": 0.39932551378216224
+     },
+     {
+      "decoder_key": "hsmm__ov50_md000_t400",
+      "val.timeline.seg_f1_25": 0.3964358222349396
+     },
+     {
+      "decoder_key": "hsmm__ov00_md070_t400",
+      "val.timeline.seg_f1_25": 0.39104014332480985
+     }
+    ]
+   },
+   "none": {
+    "decoder_key": "none",
+    "params": {
+     "decoder": "none",
+     "ov": 50
+    },
+    "val.timeline.seg_f1_25": 0.276254828215134,
+    "val.timeline.macro_f1": 0.3618360914157387,
+    "top5": [
+     {
+      "decoder_key": "none",
+      "val.timeline.seg_f1_25": 0.276254828215134
+     }
+    ]
+   }
+  },
+  "E1_gestures_only/cnn_bilstm__fs100_w075_ov75_acc_raw__hp25": {
+   "hmm": {
+    "decoder_key": "hmm__ov50_st090_md070_t400",
+    "params": {
+     "decoder": "hmm",
+     "ov": 50,
+     "st": 0.9,
+     "md": 0.7,
+     "t": 4.0
+    },
+    "val.timeline.seg_f1_25": 0.46877761139499746,
+    "val.timeline.macro_f1": 0.40619844893846074,
+    "top5": [
+     {
+      "decoder_key": "hmm__ov50_st090_md070_t400",
+      "val.timeline.seg_f1_25": 0.46877761139499746
+     },
+     {
+      "decoder_key": "hmm__ov50_st090_md030_t400",
+      "val.timeline.seg_f1_25": 0.46876156213221154
+     },
+     {
+      "decoder_key": "hmm__ov50_st090_md050_t400",
+      "val.timeline.seg_f1_25": 0.46849383556181645
+     },
+     {
+      "decoder_key": "hmm__ov50_st080_md030_t400",
+      "val.timeline.seg_f1_25": 0.46767889239580857
+     },
+     {
+      "decoder_key": "hmm__ov50_st080_md070_t400",
+      "val.timeline.seg_f1_25": 0.46733522537501787
+     }
+    ]
+   },
+   "hsmm": {
+    "decoder_key": "hsmm__ov50_md070_t400",
+    "params": {
+     "decoder": "hsmm",
+     "ov": 50,
+     "md": 0.7,
+     "t": 4.0
+    },
+    "val.timeline.seg_f1_25": 0.4411496804233812,
+    "val.timeline.macro_f1": 0.4050135075848419,
+    "top5": [
+     {
+      "decoder_key": "hsmm__ov50_md070_t400",
+      "val.timeline.seg_f1_25": 0.4411496804233812
+     },
+     {
+      "decoder_key": "hsmm__ov75_md070_t400",
+      "val.timeline.seg_f1_25": 0.44068865500824267
+     },
+     {
+      "decoder_key": "hsmm__ov75_md030_t400",
+      "val.timeline.seg_f1_25": 0.4395450352184286
+     },
+     {
+      "decoder_key": "hsmm__ov75_md050_t400",
+      "val.timeline.seg_f1_25": 0.4395450352184286
+     },
+     {
+      "decoder_key": "hsmm__ov50_md050_t400",
+      "val.timeline.seg_f1_25": 0.4391999547670535
+     }
+    ]
+   },
+   "none": {
+    "decoder_key": "none",
+    "params": {
+     "decoder": "none",
+     "ov": 75
+    },
+    "val.timeline.seg_f1_25": 0.25140065654708066,
+    "val.timeline.macro_f1": 0.3673019524715831,
+    "top5": [
+     {
+      "decoder_key": "none",
+      "val.timeline.seg_f1_25": 0.25140065654708066
+     }
+    ]
+   }
+  },
+  "E1_gestures_only/cnn_bilstm__fs50_w500_ov75_acc_raw__hp14": {
+   "hmm": {
+    "decoder_key": "hmm__ov75_st080_md070_t100",
+    "params": {
+     "decoder": "hmm",
+     "ov": 75,
+     "st": 0.8,
+     "md": 0.7,
+     "t": 1.0
+    },
+    "val.timeline.seg_f1_25": 0.4500688098300645,
+    "val.timeline.macro_f1": 0.4254397771676521,
+    "top5": [
+     {
+      "decoder_key": "hmm__ov75_st080_md070_t100",
+      "val.timeline.seg_f1_25": 0.4500688098300645
+     },
+     {
+      "decoder_key": "hmm__ov75_st090_md070_t100",
+      "val.timeline.seg_f1_25": 0.4497323087440598
+     },
+     {
+      "decoder_key": "hmm__ov75_st080_md050_t100",
+      "val.timeline.seg_f1_25": 0.4495372071968584
+     },
+     {
+      "decoder_key": "hmm__ov75_st090_md050_t100",
+      "val.timeline.seg_f1_25": 0.4495117728854483
+     },
+     {
+      "decoder_key": "hmm__ov75_st080_md030_t100",
+      "val.timeline.seg_f1_25": 0.44950782976190745
+     }
+    ]
+   },
+   "hsmm": {
+    "decoder_key": "hsmm__ov75_md030_t200",
+    "params": {
+     "decoder": "hsmm",
+     "ov": 75,
+     "md": 0.3,
+     "t": 2.0
+    },
+    "val.timeline.seg_f1_25": 0.44804525006936263,
+    "val.timeline.macro_f1": 0.4283033392362479,
+    "top5": [
+     {
+      "decoder_key": "hsmm__ov75_md030_t200",
+      "val.timeline.seg_f1_25": 0.44804525006936263
+     },
+     {
+      "decoder_key": "hsmm__ov75_md050_t200",
+      "val.timeline.seg_f1_25": 0.44804525006936263
+     },
+     {
+      "decoder_key": "hsmm__ov75_md070_t200",
+      "val.timeline.seg_f1_25": 0.44804525006936263
+     },
+     {
+      "decoder_key": "hsmm__ov75_md000_t200",
+      "val.timeline.seg_f1_25": 0.4476660119300957
+     },
+     {
+      "decoder_key": "hsmm__ov75_md070_t100",
+      "val.timeline.seg_f1_25": 0.4474042291173668
+     }
+    ]
+   },
+   "none": {
+    "decoder_key": "none",
+    "params": {
+     "decoder": "none",
+     "ov": 75
+    },
+    "val.timeline.seg_f1_25": 0.39820347038549275,
+    "val.timeline.macro_f1": 0.4061350597693504,
+    "top5": [
+     {
+      "decoder_key": "none",
+      "val.timeline.seg_f1_25": 0.39820347038549275
+     }
+    ]
+   }
+  },
+  "E1_gestures_only/cnn_bilstm__fs50_w500_ov75_acc_raw__hp21": {
+   "hmm": {
+    "decoder_key": "hmm__ov75_st080_md050_t100",
+    "params": {
+     "decoder": "hmm",
+     "ov": 75,
+     "st": 0.8,
+     "md": 0.5,
+     "t": 1.0
+    },
+    "val.timeline.seg_f1_25": 0.437259179763831,
+    "val.timeline.macro_f1": 0.4233392986601272,
+    "top5": [
+     {
+      "decoder_key": "hmm__ov75_st080_md050_t100",
+      "val.timeline.seg_f1_25": 0.437259179763831
+     },
+     {
+      "decoder_key": "hmm__ov75_st095_md070_t100",
+      "val.timeline.seg_f1_25": 0.4368227728338847
+     },
+     {
+      "decoder_key": "hmm__ov75_st095_md050_t100",
+      "val.timeline.seg_f1_25": 0.43676627014522673
+     },
+     {
+      "decoder_key": "hmm__ov75_st090_md030_t100",
+      "val.timeline.seg_f1_25": 0.4367625773239455
+     },
+     {
+      "decoder_key": "hmm__ov75_st095_md030_t100",
+      "val.timeline.seg_f1_25": 0.4365978239927378
+     }
+    ]
+   },
+   "hsmm": {
+    "decoder_key": "hsmm__ov75_md030_t100",
+    "params": {
+     "decoder": "hsmm",
+     "ov": 75,
+     "md": 0.3,
+     "t": 1.0
+    },
+    "val.timeline.seg_f1_25": 0.4293666199253556,
+    "val.timeline.macro_f1": 0.42526904533016896,
+    "top5": [
+     {
+      "decoder_key": "hsmm__ov75_md030_t100",
+      "val.timeline.seg_f1_25": 0.4293666199253556
+     },
+     {
+      "decoder_key": "hsmm__ov75_md050_t100",
+      "val.timeline.seg_f1_25": 0.4293666199253556
+     },
+     {
+      "decoder_key": "hsmm__ov75_md070_t100",
+      "val.timeline.seg_f1_25": 0.4292927992499121
+     },
+     {
+      "decoder_key": "hsmm__ov75_md000_t100",
+      "val.timeline.seg_f1_25": 0.4290653581102289
+     },
+     {
+      "decoder_key": "hsmm__ov75_md030_t200",
+      "val.timeline.seg_f1_25": 0.42718531183414826
+     }
+    ]
+   },
+   "none": {
+    "decoder_key": "none",
+    "params": {
+     "decoder": "none",
+     "ov": 75
+    },
+    "val.timeline.seg_f1_25": 0.3820901794976066,
+    "val.timeline.macro_f1": 0.40603937675238105,
+    "top5": [
+     {
+      "decoder_key": "none",
+      "val.timeline.seg_f1_25": 0.3820901794976066
+     }
+    ]
+   }
+  },
+  "E1_gestures_only/cnn_bilstm__fs50_w500_ov75_acc_raw__hp30": {
+   "hmm": {
+    "decoder_key": "hmm__ov75_st095_md030_t100",
+    "params": {
+     "decoder": "hmm",
+     "ov": 75,
+     "st": 0.95,
+     "md": 0.3,
+     "t": 1.0
+    },
+    "val.timeline.seg_f1_25": 0.4491495108374734,
+    "val.timeline.macro_f1": 0.4299211629741746,
+    "top5": [
+     {
+      "decoder_key": "hmm__ov75_st095_md030_t100",
+      "val.timeline.seg_f1_25": 0.4491495108374734
+     },
+     {
+      "decoder_key": "hmm__ov75_st095_md070_t100",
+      "val.timeline.seg_f1_25": 0.44831815149488247
+     },
+     {
+      "decoder_key": "hmm__ov75_st095_md050_t100",
+      "val.timeline.seg_f1_25": 0.44794004403365345
+     },
+     {
+      "decoder_key": "hmm__ov75_st090_md070_t100",
+      "val.timeline.seg_f1_25": 0.44768634120994666
+     },
+     {
+      "decoder_key": "hmm__ov75_st080_md070_t100",
+      "val.timeline.seg_f1_25": 0.4468807742221712
+     }
+    ]
+   },
+   "hsmm": {
+    "decoder_key": "hsmm__ov75_md070_t100",
+    "params": {
+     "decoder": "hsmm",
+     "ov": 75,
+     "md": 0.7,
+     "t": 1.0
+    },
+    "val.timeline.seg_f1_25": 0.443461671335076,
+    "val.timeline.macro_f1": 0.4332096357431484,
+    "top5": [
+     {
+      "decoder_key": "hsmm__ov75_md070_t100",
+      "val.timeline.seg_f1_25": 0.443461671335076
+     },
+     {
+      "decoder_key": "hsmm__ov75_md050_t100",
+      "val.timeline.seg_f1_25": 0.4433806954565861
+     },
+     {
+      "decoder_key": "hsmm__ov75_md030_t100",
+      "val.timeline.seg_f1_25": 0.4432881523745424
+     },
+     {
+      "decoder_key": "hsmm__ov75_md000_t100",
+      "val.timeline.seg_f1_25": 0.4423885511204201
+     },
+     {
+      "decoder_key": "hsmm__ov75_md030_t200",
+      "val.timeline.seg_f1_25": 0.44046843453397605
+     }
+    ]
+   },
+   "none": {
+    "decoder_key": "none",
+    "params": {
+     "decoder": "none",
+     "ov": 75
+    },
+    "val.timeline.seg_f1_25": 0.38304710282147536,
+    "val.timeline.macro_f1": 0.4071558589252888,
+    "top5": [
+     {
+      "decoder_key": "none",
+      "val.timeline.seg_f1_25": 0.38304710282147536
+     }
+    ]
+   }
+  },
+  "E2_daily_negatives/cnn__fs100_w075_ov75_accgyr_hp03__hpdef": {
+   "hmm": {
+    "decoder_key": "hmm__ov50_st080_md070_t400",
+    "params": {
+     "decoder": "hmm",
+     "ov": 50,
+     "st": 0.8,
+     "md": 0.7,
+     "t": 4.0
+    },
+    "val.timeline.seg_f1_25": 0.8292824315385734,
+    "val.timeline.macro_f1": 0.8189347779214942,
+    "top5": [
+     {
+      "decoder_key": "hmm__ov50_st080_md070_t400",
+      "val.timeline.seg_f1_25": 0.8292824315385734
+     },
+     {
+      "decoder_key": "hmm__ov50_st080_md050_t400",
+      "val.timeline.seg_f1_25": 0.8291203522012768
+     },
+     {
+      "decoder_key": "hmm__ov50_st080_md030_t400",
+      "val.timeline.seg_f1_25": 0.829097367359043
+     },
+     {
+      "decoder_key": "hmm__ov75_st080_md070_t400",
+      "val.timeline.seg_f1_25": 0.8272404970390774
+     },
+     {
+      "decoder_key": "hmm__ov75_st080_md050_t400",
+      "val.timeline.seg_f1_25": 0.8249428139805342
+     }
+    ]
+   },
+   "hsmm": {
+    "decoder_key": "hsmm__ov50_md030_t400",
+    "params": {
+     "decoder": "hsmm",
+     "ov": 50,
+     "md": 0.3,
+     "t": 4.0
+    },
+    "val.timeline.seg_f1_25": 0.831179732246547,
+    "val.timeline.macro_f1": 0.8158776468375487,
+    "top5": [
+     {
+      "decoder_key": "hsmm__ov50_md030_t400",
+      "val.timeline.seg_f1_25": 0.831179732246547
+     },
+     {
+      "decoder_key": "hsmm__ov50_md050_t400",
+      "val.timeline.seg_f1_25": 0.831179732246547
+     },
+     {
+      "decoder_key": "hsmm__ov50_md070_t400",
+      "val.timeline.seg_f1_25": 0.830946351894485
+     },
+     {
+      "decoder_key": "hsmm__ov50_md000_t400",
+      "val.timeline.seg_f1_25": 0.8309402206198206
+     },
+     {
+      "decoder_key": "hsmm__ov75_md030_t400",
+      "val.timeline.seg_f1_25": 0.8288278746951488
+     }
+    ]
+   },
+   "none": {
+    "decoder_key": "none",
+    "params": {
+     "decoder": "none",
+     "ov": 75
+    },
+    "val.timeline.seg_f1_25": 0.6774039393249457,
+    "val.timeline.macro_f1": 0.8027772153332845,
+    "top5": [
+     {
+      "decoder_key": "none",
+      "val.timeline.seg_f1_25": 0.6774039393249457
+     }
+    ]
+   }
+  },
+  "E2_daily_negatives/cnn__fs100_w100_ov50_accgyr_hp03__hpdef": {
+   "hmm": {
+    "decoder_key": "hmm__ov00_st080_md070_t400",
+    "params": {
+     "decoder": "hmm",
+     "ov": 0,
+     "st": 0.8,
+     "md": 0.7,
+     "t": 4.0
+    },
+    "val.timeline.seg_f1_25": 0.8314131387351895,
+    "val.timeline.macro_f1": 0.8046688012899291,
+    "top5": [
+     {
+      "decoder_key": "hmm__ov00_st080_md070_t400",
+      "val.timeline.seg_f1_25": 0.8314131387351895
+     },
+     {
+      "decoder_key": "hmm__ov00_st080_md050_t400",
+      "val.timeline.seg_f1_25": 0.8283815885515525
+     },
+     {
+      "decoder_key": "hmm__ov00_st090_md070_t400",
+      "val.timeline.seg_f1_25": 0.8279377245626531
+     },
+     {
+      "decoder_key": "hmm__ov50_st095_md070_t200",
+      "val.timeline.seg_f1_25": 0.8275856439622775
+     },
+     {
+      "decoder_key": "hmm__ov50_st090_md070_t200",
+      "val.timeline.seg_f1_25": 0.8275790727153531
+     }
+    ]
+   },
+   "hsmm": {
+    "decoder_key": "hsmm__ov50_md030_t400",
+    "params": {
+     "decoder": "hsmm",
+     "ov": 50,
+     "md": 0.3,
+     "t": 4.0
+    },
+    "val.timeline.seg_f1_25": 0.8318550327434197,
+    "val.timeline.macro_f1": 0.8081808520219084,
+    "top5": [
+     {
+      "decoder_key": "hsmm__ov50_md030_t400",
+      "val.timeline.seg_f1_25": 0.8318550327434197
+     },
+     {
+      "decoder_key": "hsmm__ov50_md050_t400",
+      "val.timeline.seg_f1_25": 0.8318550327434197
+     },
+     {
+      "decoder_key": "hsmm__ov50_md000_t400",
+      "val.timeline.seg_f1_25": 0.8317420764052089
+     },
+     {
+      "decoder_key": "hsmm__ov50_md070_t400",
+      "val.timeline.seg_f1_25": 0.8317373982658237
+     },
+     {
+      "decoder_key": "hsmm__ov00_md050_t400",
+      "val.timeline.seg_f1_25": 0.8292388228499422
+     }
+    ]
+   },
+   "none": {
+    "decoder_key": "none",
+    "params": {
+     "decoder": "none",
+     "ov": 50
+    },
+    "val.timeline.seg_f1_25": 0.7420955526067601,
+    "val.timeline.macro_f1": 0.816108293434245,
+    "top5": [
+     {
+      "decoder_key": "none",
+      "val.timeline.seg_f1_25": 0.7420955526067601
+     }
+    ]
+   }
+  },
+  "E2_daily_negatives/cnn_bilstm__fs100_w200_ov75_accgyr_hp03__hp05": {
+   "hmm": {
+    "decoder_key": "hmm__ov75_st095_md030_t200",
+    "params": {
+     "decoder": "hmm",
+     "ov": 75,
+     "st": 0.95,
+     "md": 0.3,
+     "t": 2.0
+    },
+    "val.timeline.seg_f1_25": 0.8448694457060876,
+    "val.timeline.macro_f1": 0.792745121844639,
+    "top5": [
+     {
+      "decoder_key": "hmm__ov75_st095_md030_t200",
+      "val.timeline.seg_f1_25": 0.8448694457060876
+     },
+     {
+      "decoder_key": "hmm__ov75_st095_md050_t200",
+      "val.timeline.seg_f1_25": 0.8443132937258271
+     },
+     {
+      "decoder_key": "hmm__ov75_st095_md070_t200",
+      "val.timeline.seg_f1_25": 0.843926693505258
+     },
+     {
+      "decoder_key": "hmm__ov75_st090_md030_t200",
+      "val.timeline.seg_f1_25": 0.8435320735910907
+     },
+     {
+      "decoder_key": "hmm__ov75_st090_md050_t200",
+      "val.timeline.seg_f1_25": 0.8432615642166613
+     }
+    ]
+   },
+   "hsmm": {
+    "decoder_key": "hsmm__ov75_md030_t400",
+    "params": {
+     "decoder": "hsmm",
+     "ov": 75,
+     "md": 0.3,
+     "t": 4.0
+    },
+    "val.timeline.seg_f1_25": 0.8397892743354878,
+    "val.timeline.macro_f1": 0.7991240072943797,
+    "top5": [
+     {
+      "decoder_key": "hsmm__ov75_md030_t400",
+      "val.timeline.seg_f1_25": 0.8397892743354878
+     },
+     {
+      "decoder_key": "hsmm__ov75_md050_t400",
+      "val.timeline.seg_f1_25": 0.8397892743354878
+     },
+     {
+      "decoder_key": "hsmm__ov75_md070_t400",
+      "val.timeline.seg_f1_25": 0.8397892743354878
+     },
+     {
+      "decoder_key": "hsmm__ov75_md000_t400",
+      "val.timeline.seg_f1_25": 0.8392985677850608
+     },
+     {
+      "decoder_key": "hsmm__ov75_md000_t200",
+      "val.timeline.seg_f1_25": 0.8370740877567333
+     }
+    ]
+   },
+   "none": {
+    "decoder_key": "none",
+    "params": {
+     "decoder": "none",
+     "ov": 75
+    },
+    "val.timeline.seg_f1_25": 0.825383748606183,
+    "val.timeline.macro_f1": 0.8331054334872359,
+    "top5": [
+     {
+      "decoder_key": "none",
+      "val.timeline.seg_f1_25": 0.825383748606183
+     }
+    ]
+   }
+  },
+  "E2_daily_negatives/cnn_bilstm__fs100_w200_ov75_accgyr_hp03__hp15": {
+   "hmm": {
+    "decoder_key": "hmm__ov75_st080_md030_t200",
+    "params": {
+     "decoder": "hmm",
+     "ov": 75,
+     "st": 0.8,
+     "md": 0.3,
+     "t": 2.0
+    },
+    "val.timeline.seg_f1_25": 0.8430246144907403,
+    "val.timeline.macro_f1": 0.7885078871365657,
+    "top5": [
+     {
+      "decoder_key": "hmm__ov75_st080_md030_t200",
+      "val.timeline.seg_f1_25": 0.8430246144907403
+     },
+     {
+      "decoder_key": "hmm__ov75_st095_md070_t200",
+      "val.timeline.seg_f1_25": 0.8429576529679474
+     },
+     {
+      "decoder_key": "hmm__ov75_st095_md030_t200",
+      "val.timeline.seg_f1_25": 0.8429141035954343
+     },
+     {
+      "decoder_key": "hmm__ov75_st090_md050_t200",
+      "val.timeline.seg_f1_25": 0.8428981512238065
+     },
+     {
+      "decoder_key": "hmm__ov75_st090_md030_t200",
+      "val.timeline.seg_f1_25": 0.8427367592360827
+     }
+    ]
+   },
+   "hsmm": {
+    "decoder_key": "hsmm__ov75_md030_t400",
+    "params": {
+     "decoder": "hsmm",
+     "ov": 75,
+     "md": 0.3,
+     "t": 4.0
+    },
+    "val.timeline.seg_f1_25": 0.8426141647754952,
+    "val.timeline.macro_f1": 0.7977142671878183,
+    "top5": [
+     {
+      "decoder_key": "hsmm__ov75_md030_t400",
+      "val.timeline.seg_f1_25": 0.8426141647754952
+     },
+     {
+      "decoder_key": "hsmm__ov75_md050_t400",
+      "val.timeline.seg_f1_25": 0.8426141647754952
+     },
+     {
+      "decoder_key": "hsmm__ov75_md070_t400",
+      "val.timeline.seg_f1_25": 0.8426141647754952
+     },
+     {
+      "decoder_key": "hsmm__ov75_md000_t400",
+      "val.timeline.seg_f1_25": 0.8425401970159379
+     },
+     {
+      "decoder_key": "hsmm__ov75_md000_t200",
+      "val.timeline.seg_f1_25": 0.8360449211875491
+     }
+    ]
+   },
+   "none": {
+    "decoder_key": "none",
+    "params": {
+     "decoder": "none",
+     "ov": 75
+    },
+    "val.timeline.seg_f1_25": 0.8219834221176193,
+    "val.timeline.macro_f1": 0.8345420536174629,
+    "top5": [
+     {
+      "decoder_key": "none",
+      "val.timeline.seg_f1_25": 0.8219834221176193
+     }
+    ]
+   }
+  },
+  "E2_daily_negatives/cnn_bilstm__fs100_w200_ov75_accgyr_hp03__hp31": {
+   "hmm": {
+    "decoder_key": "hmm__ov75_st095_md030_t200",
+    "params": {
+     "decoder": "hmm",
+     "ov": 75,
+     "st": 0.95,
+     "md": 0.3,
+     "t": 2.0
+    },
+    "val.timeline.seg_f1_25": 0.8388550387306615,
+    "val.timeline.macro_f1": 0.7890481920471626,
+    "top5": [
+     {
+      "decoder_key": "hmm__ov75_st095_md030_t200",
+      "val.timeline.seg_f1_25": 0.8388550387306615
+     },
+     {
+      "decoder_key": "hmm__ov75_st095_md050_t200",
+      "val.timeline.seg_f1_25": 0.837794144406529
+     },
+     {
+      "decoder_key": "hmm__ov75_st095_md070_t200",
+      "val.timeline.seg_f1_25": 0.8370787446160171
+     },
+     {
+      "decoder_key": "hmm__ov75_st090_md030_t200",
+      "val.timeline.seg_f1_25": 0.8369952928525453
+     },
+     {
+      "decoder_key": "hmm__ov75_st080_md070_t400",
+      "val.timeline.seg_f1_25": 0.8361140579263747
+     }
+    ]
+   },
+   "hsmm": {
+    "decoder_key": "hsmm__ov75_md030_t400",
+    "params": {
+     "decoder": "hsmm",
+     "ov": 75,
+     "md": 0.3,
+     "t": 4.0
+    },
+    "val.timeline.seg_f1_25": 0.8335206401610374,
+    "val.timeline.macro_f1": 0.7963532110787602,
+    "top5": [
+     {
+      "decoder_key": "hsmm__ov75_md030_t400",
+      "val.timeline.seg_f1_25": 0.8335206401610374
+     },
+     {
+      "decoder_key": "hsmm__ov75_md050_t400",
+      "val.timeline.seg_f1_25": 0.8335206401610374
+     },
+     {
+      "decoder_key": "hsmm__ov75_md070_t400",
+      "val.timeline.seg_f1_25": 0.8335206401610374
+     },
+     {
+      "decoder_key": "hsmm__ov75_md000_t400",
+      "val.timeline.seg_f1_25": 0.8333845141969738
+     },
+     {
+      "decoder_key": "hsmm__ov50_md030_t400",
+      "val.timeline.seg_f1_25": 0.8293930956554427
+     }
+    ]
+   },
+   "none": {
+    "decoder_key": "none",
+    "params": {
+     "decoder": "none",
+     "ov": 75
+    },
+    "val.timeline.seg_f1_25": 0.8157233461004691,
+    "val.timeline.macro_f1": 0.8332538911490064,
+    "top5": [
+     {
+      "decoder_key": "none",
+      "val.timeline.seg_f1_25": 0.8157233461004691
+     }
+    ]
+   }
+  }
+ }
+}

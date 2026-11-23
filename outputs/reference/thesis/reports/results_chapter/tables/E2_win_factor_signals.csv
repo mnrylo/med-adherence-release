@@ -1,0 +1,5 @@
+,mean,mean,mean,mean,mean,mean,std,std,std,std,std,std,n
+,val.window.macro_f1,test_sequences.window.macro_f1,test_wild.window.macro_f1,test_sequences.window.accuracy,test_external.external.gesture_events_per_hour,test_external.external.g3_events_per_hour,val.window.macro_f1,test_sequences.window.macro_f1,test_wild.window.macro_f1,test_sequences.window.accuracy,test_external.external.gesture_events_per_hour,test_external.external.g3_events_per_hour,
+signals,,,,,,,,,,,,,
+acc,0.6533568393752148,0.702916814149728,0.6706254596368961,0.7179621531392617,135.09654447877364,25.095354168930843,0.07695125909733176,0.06496439204189827,0.08999375231853982,0.05689333718267344,97.82386767825147,25.34345853699431,360
+acc+gyr,0.7253771253534699,0.7655118120138533,0.7454112986019712,0.7691844240613617,118.33594683972736,19.38238444937819,0.06647932460257129,0.04218543518444587,0.06876207285556832,0.03821443469853434,70.89806493462731,18.450681194184245,360

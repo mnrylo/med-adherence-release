@@ -1,0 +1,35 @@
+{
+ "experiment": "E1",
+ "stage": "w075_B",
+ "created": "2026-10-18T21:26:27",
+ "rule": "mean val.timeline.seg_f1_25 over replicates (validation), tie-break val.window.macro_f1",
+ "note": "3 folds x 3 seeds",
+ "n_candidates": 3,
+ "n_scored": 3,
+ "advanced": [
+  "cnn_bilstm__fs100_w075_ov75_acc_raw__hpdef"
+ ],
+ "ranking": [
+  {
+   "config_key": "cnn_bilstm__fs100_w075_ov75_acc_raw__hpdef",
+   "score": 0.24435172206053835,
+   "score_std": 0.0375701289757713,
+   "tie_break": 0.31404878575987405,
+   "n_runs": 9
+  },
+  {
+   "config_key": "cnn__fs100_w075_ov75_acc_raw__hpdef",
+   "score": 0.24350374787283163,
+   "score_std": 0.03124504205599148,
+   "tie_break": 0.32784689970034425,
+   "n_runs": 9
+  },
+  {
+   "config_key": "cnn_lstm__fs100_w075_ov75_acc_raw__hpdef",
+   "score": 0.24310877947203263,
+   "score_std": 0.034732216432468176,
+   "tie_break": 0.3135302988553424,
+   "n_runs": 9
+  }
+ ]
+}

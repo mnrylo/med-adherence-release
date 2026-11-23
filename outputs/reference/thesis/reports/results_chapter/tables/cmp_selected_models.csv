@@ -1,0 +1,39 @@
+,exp,level,metric,mean,std
+0,E1,window,window macro F1 — blind seq,0.8705397612512914,0.012495111931059611
+1,E1,window,window macro F1 — daily activity,0.4571038971628598,0.043066945435776174
+2,E1,window,window G5 precision — daily activity,0.980787335177915,0.004409210905641214
+3,E1,window,window G3 precision — daily activity,0.19473332660761983,0.05986575995897726
+4,E1,sequence,seg F1@25 — blind sequences — no decoder,0.9293874047605529,0.014855858593438655
+5,E1,sequence,Order EM — blind sequences — no decoder,0.8117195004803075,0.033792620748007415
+6,E1,sequence,seg F1@25 — sequences in daily activity — no decoder,0.5347806153173207,0.05172360251440608
+7,E1,sequence,Order EM — sequences in daily activity — no decoder,0.09478065962215815,0.04366836938590089
+8,E1,sequence,seg F1@25 — blind sequences — HMM,0.9343597852198608,0.012354126837511017
+9,E1,sequence,Order EM — blind sequences — HMM,0.7470381043868076,0.04860369122256873
+10,E1,sequence,seg F1@25 — sequences in daily activity — HMM,0.6217109200358651,0.04905966854397912
+11,E1,sequence,Order EM — sequences in daily activity — HMM,0.1572206211975664,0.05745849755047897
+12,E1,intake,LLR ≤1 FA/h sensitivity — blind sequences,0.3860727086533538,0.1398861907787338
+13,E1,intake,LLR ≤1 FA/h specificity — blind sequences,1.0,0.0
+14,E1,intake,LLR ≤1 FA/h sensitivity — sequences in daily activity,0.398873527905786,0.12138092943249408
+15,E1,intake,LLR ≤1 FA/h specificity — sequences in daily activity,0.9666666666666666,0.013867504905630764
+16,E1,intake,G3 rule FA/h — no decoder,50.231075367314084,16.50315983006809
+17,E1,intake,G3 rule FA/h — HMM,26.062610297732714,11.572644384604834
+18,E1,intake,LLR ≤1 FA/h — FA/h,0.9211963131446432,0.3308120876377915
+19,E2,window,window macro F1 — blind seq,0.8190473180462389,0.008175027437146164
+20,E2,window,window macro F1 — daily activity,0.8395310464679504,0.006822877563071185
+21,E2,window,window G5 precision — daily activity,0.9870007668549938,0.002052613153429897
+22,E2,window,window G3 precision — daily activity,0.7138076915000471,0.034354427498140515
+23,E2,sequence,seg F1@25 — blind sequences — no decoder,0.9376753497824336,0.01122938979287297
+24,E2,sequence,Order EM — blind sequences — no decoder,0.7377521613832853,0.04926605474720103
+25,E2,sequence,seg F1@25 — sequences in daily activity — no decoder,0.8967312078072087,0.00865428343214074
+26,E2,sequence,Order EM — sequences in daily activity — no decoder,0.6663464617355107,0.04310206965114762
+27,E2,sequence,seg F1@25 — blind sequences — HMM,0.9501478340223924,0.006600960072928085
+28,E2,sequence,Order EM — blind sequences — HMM,0.7588856868395772,0.03541269662087754
+29,E2,sequence,seg F1@25 — sequences in daily activity — HMM,0.9246575007394046,0.005684327396261045
+30,E2,sequence,Order EM — sequences in daily activity — HMM,0.7284662183797631,0.029097274218753046
+31,E2,intake,LLR ≤1 FA/h sensitivity — blind sequences,0.9877112135176651,0.005643985582449755
+32,E2,intake,LLR ≤1 FA/h specificity — blind sequences,0.994017094017094,0.013199525821778184
+33,E2,intake,LLR ≤1 FA/h sensitivity — sequences in daily activity,0.9907834101382489,0.005152230362902793
+34,E2,intake,LLR ≤1 FA/h specificity — sequences in daily activity,0.976923076923077,0.01720052290384459
+35,E2,intake,G3 rule FA/h — no decoder,2.3909702060271076,1.061105039658543
+36,E2,intake,G3 rule FA/h — HMM,1.6146811780962287,0.5511105388780714
+37,E2,intake,LLR ≤1 FA/h — FA/h,0.7969900686757027,0.31969538856330637

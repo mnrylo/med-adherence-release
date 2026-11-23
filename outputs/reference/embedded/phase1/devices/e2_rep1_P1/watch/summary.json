@@ -1,0 +1,56 @@
+{
+ "run_id": "e2_rep1_P1",
+ "role": "watch",
+ "elapsed_s": 3600.301859773,
+ "cpu_ms": 125448,
+ "samples": 360010,
+ "windows": 0,
+ "alarms": 0,
+ "tx_bytes": 8755328,
+ "rx_bytes": 0,
+ "tx_msgs": 3604,
+ "rx_msgs": 0,
+ "stages": {
+  "filter": {
+   "total_ms": 0,
+   "count": 0,
+   "mean_us": 0
+  },
+  "window": {
+   "total_ms": 0,
+   "count": 0,
+   "mean_us": 0
+  },
+  "inference": {
+   "total_ms": 0,
+   "count": 0,
+   "mean_us": 0
+  },
+  "timeline": {
+   "total_ms": 0,
+   "count": 0,
+   "mean_us": 0
+  },
+  "viterbi": {
+   "total_ms": 0,
+   "count": 0,
+   "mean_us": 0
+  },
+  "llr": {
+   "total_ms": 0,
+   "count": 0,
+   "mean_us": 0
+  },
+  "transport": {
+   "total_ms": 5912.41166,
+   "count": 3604,
+   "mean_us": 1640.5137791342952
+  }
+ },
+ "inference": {},
+ "extra": {
+  "reason": "duration",
+  "reorder_max_pending": 0,
+  "imu_events": 719971
+ }
+}

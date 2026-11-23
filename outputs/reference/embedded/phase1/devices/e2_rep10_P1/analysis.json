@@ -1,0 +1,114 @@
+{
+ "phone": {
+  "device": {
+   "manufacturer": "samsung",
+   "model": "SM-S918B",
+   "device": "dm3q",
+   "hardware": "qcom",
+   "board": "kalama",
+   "soc_manufacturer": "QTI",
+   "soc_model": "SM8550",
+   "sdk": 37,
+   "release": "17",
+   "abis": [
+    "arm64-v8a",
+    "armeabi-v7a",
+    "armeabi"
+   ],
+   "cores": 8,
+   "max_memory_mb": 256
+  },
+  "cost": {
+   "elapsed_h": 1.0001307099627776,
+   "samples": 359900,
+   "windows": 7197,
+   "alarms": 0,
+   "cpu_s_per_h": 89.30932638127301,
+   "inference_us": {
+    "p50_us": 6402.448,
+    "p90_us": 11135.416,
+    "p95_us": 12557.292,
+    "p99_us": 13807.395,
+    "p100_us": 17454.01
+   },
+   "stage_mean_us": {
+    "filter": 2.1293563684356767,
+    "window": 92.44246060858691,
+    "inference": 7180.366407669862,
+    "timeline": 7.601665462126476,
+    "viterbi": 12.673411673151751,
+    "llr": 319.7496177778766,
+    "transport": 0
+   },
+   "pss_mb_max": 78.6025390625,
+   "pss_mb_mean": 69.7723888960041,
+   "tx_kib_per_h": 0.0,
+   "rx_kib_per_h": 8549.007559540107,
+   "charge_mah_per_h": 74.39710677918082,
+   "battery_pct_per_h": 1.9999222252467959,
+   "current_avg_ma": 65.68852459016394,
+   "current_now_ma_median": 83.5
+  },
+  "fidelity": {
+   "streams": 5,
+   "alarm_lists_identical": 10,
+   "alarm_lists": 10,
+   "timeline_frame_agreement": 1.0
+  }
+ },
+ "watch": {
+  "device": {
+   "manufacturer": "samsung",
+   "model": "SM-L715F",
+   "device": "projectv2ul",
+   "hardware": "qcom",
+   "board": "vienna",
+   "soc_manufacturer": "QTI",
+   "soc_model": "vienna",
+   "sdk": 37,
+   "release": "17",
+   "abis": [
+    "armeabi-v7a",
+    "armeabi"
+   ],
+   "cores": 5,
+   "max_memory_mb": 192
+  },
+  "cost": {
+   "elapsed_h": 1.0000815058397223,
+   "samples": 360010,
+   "windows": 0,
+   "alarms": 0,
+   "cpu_s_per_h": 122.79299165410322,
+   "inference_us": {},
+   "stage_mean_us": {
+    "filter": 0,
+    "window": 0,
+    "inference": 0,
+    "timeline": 0,
+    "viterbi": 0,
+    "llr": 0,
+    "transport": 2084.872661487236
+   },
+   "pss_mb_max": 29.7197265625,
+   "pss_mb_mean": 26.96298668032787,
+   "tx_kib_per_h": 8549.428171677722,
+   "rx_kib_per_h": 0.0,
+   "charge_mah_per_h": 26.118078612226732,
+   "battery_pct_per_h": 2.999894170400099,
+   "current_avg_ma": 26.508196721311474,
+   "current_now_ma_median": 25.0
+  },
+  "latency_at_wrist": {
+   "budget": "fa10",
+   "step_s": 2,
+   "detected": 0,
+   "intakes_delivered": 0,
+   "wall_median_s": null,
+   "wall_p95_s": null,
+   "algorithmic_median_s": null,
+   "algorithmic_p95_s": null,
+   "overhead_median_s": null
+  }
+ }
+}

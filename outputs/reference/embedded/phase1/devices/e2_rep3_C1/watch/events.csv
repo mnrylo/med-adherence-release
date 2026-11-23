@@ -1,0 +1,3 @@
+elapsed_s,wall_ms,type,stream,detail
+0.036,1793683561314,start,-1,"link=true"
+3600.170,1793687161447,stop,-1,"duration"

@@ -1,0 +1,1698 @@
+{
+ "experiment": "E2",
+ "stage": "A",
+ "created": "2026-10-17T18:56:37",
+ "rule": "mean val.timeline.seg_f1_25 over replicates (validation), tie-break val.window.macro_f1",
+ "note": "",
+ "n_candidates": 240,
+ "n_scored": 240,
+ "advanced": [
+  "cnn_bilstm__fs100_w200_ov75_accgyr_hp03__hpdef",
+  "cnn_bilstm__fs50_w200_ov75_accgyr_hp03__hpdef",
+  "cnn_bilstm__fs50_w200_ov75_accgyr_raw__hpdef",
+  "cnn_bilstm__fs100_w200_ov75_accgyr_raw__hpdef",
+  "cnn_bilstm__fs20_w200_ov75_accgyr_hp03__hpdef"
+ ],
+ "ranking": [
+  {
+   "config_key": "cnn_bilstm__fs100_w200_ov75_accgyr_hp03__hpdef",
+   "score": 0.8098059750702821,
+   "score_std": 0.05878750870457339,
+   "tie_break": 0.7873286349196661,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w200_ov75_accgyr_hp03__hpdef",
+   "score": 0.8098018228577407,
+   "score_std": 0.056927277952541176,
+   "tie_break": 0.7943164152876797,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w200_ov75_accgyr_raw__hpdef",
+   "score": 0.7966007234054565,
+   "score_std": 0.06845969399794392,
+   "tie_break": 0.7875341962843585,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w200_ov75_accgyr_raw__hpdef",
+   "score": 0.7918568134348432,
+   "score_std": 0.0733030095884968,
+   "tie_break": 0.7824159065137613,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w200_ov75_accgyr_hp03__hpdef",
+   "score": 0.7886834864553518,
+   "score_std": 0.06037654407787046,
+   "tie_break": 0.7757110620524736,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w200_ov75_accgyr_raw__hpdef",
+   "score": 0.7790759813926829,
+   "score_std": 0.05461406128260146,
+   "tie_break": 0.7756856939199958,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w500_ov75_accgyr_hp03__hpdef",
+   "score": 0.7734291612180507,
+   "score_std": 0.10332244934814466,
+   "tie_break": 0.7660948594002326,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w500_ov75_accgyr_raw__hpdef",
+   "score": 0.7718114665923346,
+   "score_std": 0.0990330167584825,
+   "tie_break": 0.7656489191589256,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w500_ov75_accgyr_raw__hpdef",
+   "score": 0.7671969602297265,
+   "score_std": 0.1162975183589414,
+   "tie_break": 0.7345098914818178,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w200_ov50_accgyr_hp03__hpdef",
+   "score": 0.7654654918245688,
+   "score_std": 0.05747196296991417,
+   "tie_break": 0.790184936300845,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w500_ov75_accgyr_hp03__hpdef",
+   "score": 0.7634150460416359,
+   "score_std": 0.10925004011732398,
+   "tie_break": 0.7405943035724496,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w200_ov75_acc_hp03__hpdef",
+   "score": 0.7603591425884183,
+   "score_std": 0.018914813697131914,
+   "tie_break": 0.7372063624051547,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w500_ov75_accgyr_hp03__hpdef",
+   "score": 0.7581786238943797,
+   "score_std": 0.08670761554395286,
+   "tie_break": 0.777938370620962,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w200_ov50_accgyr_hp03__hpdef",
+   "score": 0.7542205067357203,
+   "score_std": 0.055767230704243796,
+   "tie_break": 0.7922862205164224,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w500_ov75_accgyr_raw__hpdef",
+   "score": 0.753655568581603,
+   "score_std": 0.09532617393177541,
+   "tie_break": 0.7943157128325136,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w200_ov50_accgyr_raw__hpdef",
+   "score": 0.7515697975800464,
+   "score_std": 0.08072359586536784,
+   "tie_break": 0.7866672498795236,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w500_ov75_acc_hp03__hpdef",
+   "score": 0.7514574027809321,
+   "score_std": 0.06527452040547686,
+   "tie_break": 0.7417122787817344,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w200_ov50_accgyr_raw__hpdef",
+   "score": 0.7511199207339927,
+   "score_std": 0.0794542671354852,
+   "tie_break": 0.7862261757451997,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w200_ov00_accgyr_hp03__hpdef",
+   "score": 0.7482372667240883,
+   "score_std": 0.05126331520106817,
+   "tie_break": 0.7881816006153276,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w500_ov50_accgyr_raw__hpdef",
+   "score": 0.7456153921065924,
+   "score_std": 0.12061286853728481,
+   "tie_break": 0.744337127966943,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w500_ov50_accgyr_raw__hpdef",
+   "score": 0.7441490804548906,
+   "score_std": 0.11247089442823978,
+   "tie_break": 0.7776831608337925,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w200_ov50_accgyr_hp03__hpdef",
+   "score": 0.7425285479624756,
+   "score_std": 0.042199604744480604,
+   "tie_break": 0.7757624369651265,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w200_ov25_accgyr_hp03__hpdef",
+   "score": 0.7403404314706505,
+   "score_std": 0.052345713415523173,
+   "tie_break": 0.8017546771071404,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w200_ov75_acc_hp03__hpdef",
+   "score": 0.7396253812783983,
+   "score_std": 0.010860007001856412,
+   "tie_break": 0.7248283103090456,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w200_ov00_accgyr_raw__hpdef",
+   "score": 0.7370430758369281,
+   "score_std": 0.07323277294090612,
+   "tie_break": 0.7869235463569025,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w200_ov00_accgyr_hp03__hpdef",
+   "score": 0.737014922417293,
+   "score_std": 0.056724262583154626,
+   "tie_break": 0.7911388230258259,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w200_ov50_accgyr_raw__hpdef",
+   "score": 0.7363720460944309,
+   "score_std": 0.05103375108889074,
+   "tie_break": 0.7794368336619814,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w500_ov50_accgyr_hp03__hpdef",
+   "score": 0.7353746139129796,
+   "score_std": 0.10683428242581212,
+   "tie_break": 0.772975612628203,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w500_ov25_accgyr_raw__hpdef",
+   "score": 0.7344592652778719,
+   "score_std": 0.09143481675053887,
+   "tie_break": 0.7743232638017478,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w200_ov00_accgyr_raw__hpdef",
+   "score": 0.7333273751421613,
+   "score_std": 0.07359301725816221,
+   "tie_break": 0.7852614532665184,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w500_ov25_accgyr_hp03__hpdef",
+   "score": 0.7319707091946411,
+   "score_std": 0.09261783217862965,
+   "tie_break": 0.749001943432757,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w200_ov75_acc_raw__hpdef",
+   "score": 0.7315343047980883,
+   "score_std": 0.022867928221411232,
+   "tie_break": 0.7122132368271821,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w500_ov25_accgyr_hp03__hpdef",
+   "score": 0.7305904357337255,
+   "score_std": 0.08794907121252749,
+   "tie_break": 0.766833123048416,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w500_ov25_accgyr_raw__hpdef",
+   "score": 0.7302299509797551,
+   "score_std": 0.11807434649932902,
+   "tie_break": 0.7366968805925396,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w200_ov75_acc_raw__hpdef",
+   "score": 0.7285300062083787,
+   "score_std": 0.02415289585780367,
+   "tie_break": 0.73200224805485,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w500_ov50_accgyr_hp03__hpdef",
+   "score": 0.728257867138327,
+   "score_std": 0.122863352533374,
+   "tie_break": 0.7450779906606021,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w500_ov25_accgyr_raw__hpdef",
+   "score": 0.7263894840567877,
+   "score_std": 0.09514083168430569,
+   "tie_break": 0.8002158012309014,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w200_ov25_accgyr_hp03__hpdef",
+   "score": 0.7248970283356364,
+   "score_std": 0.047145485100735116,
+   "tie_break": 0.7994042674798209,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w500_ov50_accgyr_hp03__hpdef",
+   "score": 0.7228342820976513,
+   "score_std": 0.08498140722098214,
+   "tie_break": 0.7792744635249642,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w200_ov50_acc_hp03__hpdef",
+   "score": 0.7211022599091034,
+   "score_std": 0.013221189990436982,
+   "tie_break": 0.7358324017015074,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w200_ov00_acc_hp03__hpdef",
+   "score": 0.7204473690293695,
+   "score_std": 0.03254761766717472,
+   "tie_break": 0.7415338118124768,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w500_ov75_acc_hp03__hpdef",
+   "score": 0.7201985108056187,
+   "score_std": 0.06234639986790671,
+   "tie_break": 0.7140540900820476,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w500_ov75_acc_raw__hpdef",
+   "score": 0.7194692876498537,
+   "score_std": 0.11268855868983375,
+   "tie_break": 0.7564553627464737,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w500_ov75_acc_raw__hpdef",
+   "score": 0.7190477471507905,
+   "score_std": 0.11534533427049035,
+   "tie_break": 0.7306582872034837,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w200_ov25_accgyr_raw__hpdef",
+   "score": 0.7188247846679118,
+   "score_std": 0.06595446672619268,
+   "tie_break": 0.7921395495428912,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w200_ov00_accgyr_raw__hpdef",
+   "score": 0.7155947398895971,
+   "score_std": 0.05128490520002509,
+   "tie_break": 0.7832556768714646,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w500_ov50_accgyr_raw__hpdef",
+   "score": 0.7139047796142522,
+   "score_std": 0.10680597570921568,
+   "tie_break": 0.7979846900568225,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w200_ov00_accgyr_hp03__hpdef",
+   "score": 0.7136662221936984,
+   "score_std": 0.0619998962601693,
+   "tie_break": 0.7769186026413578,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w500_ov25_accgyr_hp03__hpdef",
+   "score": 0.7134673988513454,
+   "score_std": 0.09974946166525193,
+   "tie_break": 0.7843009792213174,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w500_ov50_acc_hp03__hpdef",
+   "score": 0.712247319367736,
+   "score_std": 0.06955404809239318,
+   "tie_break": 0.7504468798811668,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w100_ov50_accgyr_hp03__hpdef",
+   "score": 0.7105140203370999,
+   "score_std": 0.0741252265349758,
+   "tie_break": 0.7475574983784129,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w200_ov25_accgyr_hp03__hpdef",
+   "score": 0.710483901566704,
+   "score_std": 0.04746667499975672,
+   "tie_break": 0.7790941006553674,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w200_ov25_accgyr_raw__hpdef",
+   "score": 0.7103433372229695,
+   "score_std": 0.08274629240180485,
+   "tie_break": 0.785293537025761,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w100_ov75_accgyr_hp03__hpdef",
+   "score": 0.7069364857953978,
+   "score_std": 0.08725167694453288,
+   "tie_break": 0.7488911301326818,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w200_ov75_acc_raw__hpdef",
+   "score": 0.7066403514279758,
+   "score_std": 0.050672341828447556,
+   "tie_break": 0.7282638789916199,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w200_ov50_acc_raw__hpdef",
+   "score": 0.7058174166498344,
+   "score_std": 0.022469774775716003,
+   "tie_break": 0.7125816746975607,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w500_ov25_acc_hp03__hpdef",
+   "score": 0.7047515998501271,
+   "score_std": 0.05575700365179631,
+   "tie_break": 0.7379758454061479,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w500_ov75_acc_raw__hpdef",
+   "score": 0.7038164221113496,
+   "score_std": 0.09030390305456935,
+   "tie_break": 0.6958517558153886,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w500_ov50_acc_hp03__hpdef",
+   "score": 0.6996384760028653,
+   "score_std": 0.0624099969676397,
+   "tie_break": 0.7249942604143791,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w100_ov50_accgyr_raw__hpdef",
+   "score": 0.6989616921971654,
+   "score_std": 0.07725772961467527,
+   "tie_break": 0.7458140585508355,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w200_ov25_accgyr_raw__hpdef",
+   "score": 0.6985829385689349,
+   "score_std": 0.05150480286031437,
+   "tie_break": 0.7787440844251932,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w500_ov50_acc_raw__hpdef",
+   "score": 0.6943001904257279,
+   "score_std": 0.09872988628916732,
+   "tie_break": 0.6951676644720762,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w500_ov75_acc_hp03__hpdef",
+   "score": 0.6940589780081569,
+   "score_std": 0.08977783486454734,
+   "tie_break": 0.7261025903934942,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w200_ov50_acc_hp03__hpdef",
+   "score": 0.6926335417386943,
+   "score_std": 0.021882387659850414,
+   "tie_break": 0.7255080766009279,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w100_ov75_accgyr_raw__hpdef",
+   "score": 0.6922160839140146,
+   "score_std": 0.08238745759619723,
+   "tie_break": 0.7475622262065497,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w500_ov25_acc_hp03__hpdef",
+   "score": 0.6903476715906726,
+   "score_std": 0.04654800373366753,
+   "tie_break": 0.71635647920523,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w500_ov50_acc_raw__hpdef",
+   "score": 0.6895836043309614,
+   "score_std": 0.11166691140193122,
+   "tie_break": 0.7581249328613371,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w500_ov50_acc_raw__hpdef",
+   "score": 0.6883893428634343,
+   "score_std": 0.11713521405314543,
+   "tie_break": 0.7324302521763847,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w200_ov50_acc_raw__hpdef",
+   "score": 0.68719039793325,
+   "score_std": 0.01829480308590232,
+   "tie_break": 0.7355204462282797,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w200_ov25_acc_hp03__hpdef",
+   "score": 0.682978104520994,
+   "score_std": 0.01086202736454792,
+   "tie_break": 0.7412487597946313,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w200_ov00_acc_raw__hpdef",
+   "score": 0.6817027608280819,
+   "score_std": 0.015408558309515182,
+   "tie_break": 0.7160793725577128,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w500_ov25_acc_raw__hpdef",
+   "score": 0.6808455531256072,
+   "score_std": 0.09818146881132024,
+   "tie_break": 0.7365672751728031,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w500_ov25_acc_raw__hpdef",
+   "score": 0.6806478115690817,
+   "score_std": 0.09929726411797243,
+   "tie_break": 0.7695335567895437,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w200_ov75_acc_hp03__hpdef",
+   "score": 0.6781968270742164,
+   "score_std": 0.046689260520914426,
+   "tie_break": 0.6794421454230767,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w200_ov00_acc_hp03__hpdef",
+   "score": 0.678154589303133,
+   "score_std": 0.01373808705874459,
+   "tie_break": 0.7226842326142519,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w500_ov00_accgyr_hp03__hpdef",
+   "score": 0.675423225575396,
+   "score_std": 0.13078934399638736,
+   "tie_break": 0.7718796960072533,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w500_ov00_accgyr_raw__hpdef",
+   "score": 0.6735330767423388,
+   "score_std": 0.12673658251501863,
+   "tie_break": 0.7841529865765015,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w500_ov00_accgyr_hp03__hpdef",
+   "score": 0.6729220864251332,
+   "score_std": 0.12928568037177507,
+   "tie_break": 0.7511066198057246,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w500_ov00_accgyr_raw__hpdef",
+   "score": 0.6697108815078444,
+   "score_std": 0.14211561807095194,
+   "tie_break": 0.7455956747110929,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w200_ov50_acc_raw__hpdef",
+   "score": 0.6682875824464549,
+   "score_std": 0.044996575632032236,
+   "tie_break": 0.7281884007335643,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w100_ov50_accgyr_raw__hpdef",
+   "score": 0.6679304176238604,
+   "score_std": 0.063864448668272,
+   "tie_break": 0.7332403967615448,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w500_ov00_accgyr_raw__hpdef",
+   "score": 0.6678209044230793,
+   "score_std": 0.1231913008794995,
+   "tie_break": 0.7983693405841329,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w100_ov50_accgyr_hp03__hpdef",
+   "score": 0.6652164399439957,
+   "score_std": 0.047933653816733604,
+   "tie_break": 0.7328588586049843,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w200_ov00_acc_raw__hpdef",
+   "score": 0.6641922113746247,
+   "score_std": 0.03127783796374023,
+   "tie_break": 0.7363464652221022,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w100_ov25_accgyr_raw__hpdef",
+   "score": 0.661024158741809,
+   "score_std": 0.08119947457536304,
+   "tie_break": 0.7444093468298224,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w500_ov50_acc_hp03__hpdef",
+   "score": 0.6599455938158388,
+   "score_std": 0.10811128184616868,
+   "tie_break": 0.7252606563846865,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w500_ov25_acc_raw__hpdef",
+   "score": 0.6595105557345056,
+   "score_std": 0.07055077560269579,
+   "tie_break": 0.6928611854891674,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w075_ov75_accgyr_hp03__hpdef",
+   "score": 0.6567070655038939,
+   "score_std": 0.09510641213286584,
+   "tie_break": 0.7213959522369805,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w500_ov00_acc_hp03__hpdef",
+   "score": 0.6563913661877873,
+   "score_std": 0.08559630915648846,
+   "tie_break": 0.7557711590219647,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w500_ov00_accgyr_hp03__hpdef",
+   "score": 0.6536413363438331,
+   "score_std": 0.11024750602601642,
+   "tie_break": 0.7730977716536657,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w100_ov25_accgyr_hp03__hpdef",
+   "score": 0.6531319577645583,
+   "score_std": 0.07288562244834162,
+   "tie_break": 0.7450266155397484,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w200_ov25_acc_hp03__hpdef",
+   "score": 0.6512161811135607,
+   "score_std": 0.005205611232581637,
+   "tie_break": 0.732828413746716,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w100_ov75_accgyr_raw__hpdef",
+   "score": 0.6506790782905986,
+   "score_std": 0.06654629538593476,
+   "tie_break": 0.7327096665142953,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w500_ov25_acc_hp03__hpdef",
+   "score": 0.6493328886850918,
+   "score_std": 0.08967512496022181,
+   "tie_break": 0.7305544349400206,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w200_ov25_acc_raw__hpdef",
+   "score": 0.6491343724594761,
+   "score_std": 0.017083950359772615,
+   "tie_break": 0.718154049608589,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w100_ov75_accgyr_hp03__hpdef",
+   "score": 0.6487152369305879,
+   "score_std": 0.053429901762492626,
+   "tie_break": 0.7335455043369091,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w100_ov75_acc_raw__hpdef",
+   "score": 0.6459754323847283,
+   "score_std": 0.04859513463789511,
+   "tie_break": 0.6768217453770768,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w100_ov50_acc_raw__hpdef",
+   "score": 0.6428548373348364,
+   "score_std": 0.035925155588671626,
+   "tie_break": 0.6772899698965946,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w075_ov75_accgyr_raw__hpdef",
+   "score": 0.6418528493244037,
+   "score_std": 0.09340151627455796,
+   "tie_break": 0.7166329386478293,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w100_ov50_acc_hp03__hpdef",
+   "score": 0.640909622809234,
+   "score_std": 0.07440533639023485,
+   "tie_break": 0.6968191353005707,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w100_ov50_accgyr_raw__hpdef",
+   "score": 0.6392873830250916,
+   "score_std": 0.040119332500957394,
+   "tie_break": 0.7083958003609863,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w100_ov75_acc_hp03__hpdef",
+   "score": 0.6361793718757649,
+   "score_std": 0.07411055181831203,
+   "tie_break": 0.6952641881021945,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w200_ov00_acc_raw__hpdef",
+   "score": 0.6354264656847125,
+   "score_std": 0.044588630360244755,
+   "tie_break": 0.7242919867497047,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w500_ov00_acc_hp03__hpdef",
+   "score": 0.6353652114860562,
+   "score_std": 0.09141318018193019,
+   "tie_break": 0.7255857398104298,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w500_ov00_acc_raw__hpdef",
+   "score": 0.6343965482024706,
+   "score_std": 0.1132190084633039,
+   "tie_break": 0.7348369346853415,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w200_ov25_acc_raw__hpdef",
+   "score": 0.6343455300009063,
+   "score_std": 0.019541924203443573,
+   "tie_break": 0.7378195561642746,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w100_ov50_accgyr_hp03__hpdef",
+   "score": 0.6339434392015407,
+   "score_std": 0.03502756685106038,
+   "tie_break": 0.69517622585492,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w075_ov50_accgyr_hp03__hpdef",
+   "score": 0.6331834475574262,
+   "score_std": 0.10167148677491847,
+   "tie_break": 0.7212566414122055,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w100_ov75_accgyr_raw__hpdef",
+   "score": 0.6300504129149684,
+   "score_std": 0.042517576894944835,
+   "tie_break": 0.7090759922911164,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w500_ov00_acc_raw__hpdef",
+   "score": 0.6289303844479922,
+   "score_std": 0.11136635644123453,
+   "tie_break": 0.6957869547525041,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w500_ov00_acc_raw__hpdef",
+   "score": 0.6285908324136136,
+   "score_std": 0.1132392881903168,
+   "tie_break": 0.7521473450809001,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w100_ov75_accgyr_hp03__hpdef",
+   "score": 0.623291087134992,
+   "score_std": 0.034903214749650975,
+   "tie_break": 0.6957504003934488,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w200_ov25_acc_raw__hpdef",
+   "score": 0.6211483764131787,
+   "score_std": 0.03732051380379687,
+   "tie_break": 0.7369579884264782,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w075_ov25_accgyr_hp03__hpdef",
+   "score": 0.6185202991485997,
+   "score_std": 0.0987519601144838,
+   "tie_break": 0.7213366318686353,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w200_ov50_acc_hp03__hpdef",
+   "score": 0.6181547417092231,
+   "score_std": 0.042316928777202174,
+   "tie_break": 0.6799182934000628,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w075_ov50_accgyr_raw__hpdef",
+   "score": 0.6170841525421854,
+   "score_std": 0.0930341257451598,
+   "tie_break": 0.7178693021050991,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w100_ov25_accgyr_raw__hpdef",
+   "score": 0.6124083531134574,
+   "score_std": 0.05355043053453904,
+   "tie_break": 0.7319803682332835,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w100_ov25_accgyr_hp03__hpdef",
+   "score": 0.6119395463495404,
+   "score_std": 0.04457891673204286,
+   "tie_break": 0.7351574903957988,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w075_ov75_accgyr_raw__hpdef",
+   "score": 0.611207571889821,
+   "score_std": 0.08043023635009755,
+   "tie_break": 0.7114965256767919,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w075_ov50_accgyr_raw__hpdef",
+   "score": 0.610963649293096,
+   "score_std": 0.0813466518188304,
+   "tie_break": 0.7120890880398826,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w100_ov50_acc_raw__hpdef",
+   "score": 0.6092770954892353,
+   "score_std": 0.05270949158051425,
+   "tie_break": 0.6574897110902743,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w075_ov25_accgyr_raw__hpdef",
+   "score": 0.6083073426102116,
+   "score_std": 0.07830828677846025,
+   "tie_break": 0.718100136414152,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w075_ov25_accgyr_raw__hpdef",
+   "score": 0.6067399592252803,
+   "score_std": 0.0705899980007224,
+   "tie_break": 0.709456281207261,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w100_ov25_acc_hp03__hpdef",
+   "score": 0.604802956882792,
+   "score_std": 0.08287451732239055,
+   "tie_break": 0.6961089683248155,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w075_ov50_accgyr_hp03__hpdef",
+   "score": 0.6012949641719815,
+   "score_std": 0.07537953197900289,
+   "tie_break": 0.7058538272596074,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w100_ov75_acc_raw__hpdef",
+   "score": 0.6010509251057989,
+   "score_std": 0.0710543169473243,
+   "tie_break": 0.6547556417535868,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w100_ov25_acc_raw__hpdef",
+   "score": 0.6006984689062035,
+   "score_std": 0.0705935558268556,
+   "tie_break": 0.6768385654166544,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w050_ov50_accgyr_hp03__hpdef",
+   "score": 0.5998045055018144,
+   "score_std": 0.08421941494240621,
+   "tie_break": 0.675073307180531,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w050_ov50_accgyr_raw__hpdef",
+   "score": 0.5972525051582589,
+   "score_std": 0.07008088039615322,
+   "tie_break": 0.6738753911102323,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w500_ov00_acc_hp03__hpdef",
+   "score": 0.5969810967579727,
+   "score_std": 0.11563816938141112,
+   "tie_break": 0.7098070851580264,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w075_ov75_acc_hp03__hpdef",
+   "score": 0.5960345754573603,
+   "score_std": 0.09413956312430836,
+   "tie_break": 0.6673813169769295,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w050_ov75_accgyr_raw__hpdef",
+   "score": 0.5930213491128572,
+   "score_std": 0.07686788708095567,
+   "tie_break": 0.6728962502092828,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w075_ov75_accgyr_hp03__hpdef",
+   "score": 0.5925137067681726,
+   "score_std": 0.05655788275328616,
+   "tie_break": 0.7057827680448097,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w075_ov25_accgyr_hp03__hpdef",
+   "score": 0.5883575804657012,
+   "score_std": 0.06032054645928375,
+   "tie_break": 0.7033115407256175,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w050_ov75_accgyr_hp03__hpdef",
+   "score": 0.5837641711332379,
+   "score_std": 0.0906798730985079,
+   "tie_break": 0.6762362509875582,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w050_ov25_accgyr_hp03__hpdef",
+   "score": 0.583240669381769,
+   "score_std": 0.08113087442524744,
+   "tie_break": 0.6749708543478142,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w050_ov25_accgyr_raw__hpdef",
+   "score": 0.5832100355155418,
+   "score_std": 0.07167941907077573,
+   "tie_break": 0.6734803393469407,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w075_ov75_acc_raw__hpdef",
+   "score": 0.5826839136277443,
+   "score_std": 0.07227244803343608,
+   "tie_break": 0.6360901812482463,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w100_ov25_accgyr_raw__hpdef",
+   "score": 0.5823117829438593,
+   "score_std": 0.051477158207313536,
+   "tie_break": 0.7100398457229457,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w100_ov25_accgyr_hp03__hpdef",
+   "score": 0.5767237746308935,
+   "score_std": 0.026734643210460398,
+   "tie_break": 0.696132917830115,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w200_ov00_acc_hp03__hpdef",
+   "score": 0.576254983403342,
+   "score_std": 0.046245509565164204,
+   "tie_break": 0.6709263026205258,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w100_ov50_acc_hp03__hpdef",
+   "score": 0.5762538708507958,
+   "score_std": 0.031145641045113803,
+   "tie_break": 0.6472640203244254,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w100_ov00_accgyr_raw__hpdef",
+   "score": 0.5758605964305422,
+   "score_std": 0.05042318894139401,
+   "tie_break": 0.746739911091487,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w075_ov25_acc_hp03__hpdef",
+   "score": 0.5744893641884522,
+   "score_std": 0.10114063979554984,
+   "tie_break": 0.6702148116320835,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w100_ov75_acc_hp03__hpdef",
+   "score": 0.5741557885710669,
+   "score_std": 0.04152769543256965,
+   "tie_break": 0.6489527823022425,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w200_ov25_acc_hp03__hpdef",
+   "score": 0.5725846829771849,
+   "score_std": 0.026617297830752642,
+   "tie_break": 0.6787268629420211,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w050_ov75_accgyr_raw__hpdef",
+   "score": 0.5717280878704151,
+   "score_std": 0.06280198936672449,
+   "tie_break": 0.6634688320249298,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w050_ov50_accgyr_raw__hpdef",
+   "score": 0.5704707943211987,
+   "score_std": 0.06290185386364941,
+   "tie_break": 0.6654478308505944,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w100_ov00_accgyr_hp03__hpdef",
+   "score": 0.5696556546567221,
+   "score_std": 0.048845698160364645,
+   "tie_break": 0.7479896036568837,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w050_ov25_accgyr_raw__hpdef",
+   "score": 0.5682924682478263,
+   "score_std": 0.06793528596120595,
+   "tie_break": 0.6645421374608221,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w075_ov50_acc_raw__hpdef",
+   "score": 0.5678964336406059,
+   "score_std": 0.0828661219387962,
+   "tie_break": 0.6361277639620778,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w050_ov00_accgyr_raw__hpdef",
+   "score": 0.5663084523488727,
+   "score_std": 0.0647193123399115,
+   "tie_break": 0.6726590735088088,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w075_ov25_accgyr_raw__hpdef",
+   "score": 0.5629456071594762,
+   "score_std": 0.04759217644752123,
+   "tie_break": 0.678800193386561,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w050_ov00_accgyr_hp03__hpdef",
+   "score": 0.5623119001948975,
+   "score_std": 0.08194233474626586,
+   "tie_break": 0.6744607611325817,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w075_ov75_accgyr_raw__hpdef",
+   "score": 0.5620504999346733,
+   "score_std": 0.04853809374576907,
+   "tie_break": 0.6780293009124874,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w075_ov50_acc_hp03__hpdef",
+   "score": 0.5613269086347898,
+   "score_std": 0.07210762598983317,
+   "tie_break": 0.6683814556253432,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w100_ov50_acc_raw__hpdef",
+   "score": 0.5577647270355567,
+   "score_std": 0.03894459574303375,
+   "tie_break": 0.634516912373047,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w075_ov25_acc_raw__hpdef",
+   "score": 0.5560549695115212,
+   "score_std": 0.08346179301279458,
+   "tie_break": 0.635289385932741,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w100_ov00_accgyr_raw__hpdef",
+   "score": 0.5496771454114358,
+   "score_std": 0.03413767657504945,
+   "tie_break": 0.7345747071485249,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w100_ov25_acc_raw__hpdef",
+   "score": 0.5492330570522285,
+   "score_std": 0.08280297083456864,
+   "tie_break": 0.6552943498886274,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w100_ov75_acc_raw__hpdef",
+   "score": 0.54727538956185,
+   "score_std": 0.03554264140918532,
+   "tie_break": 0.6340255581767557,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w050_ov75_accgyr_hp03__hpdef",
+   "score": 0.5461877371193901,
+   "score_std": 0.08682215004927106,
+   "tie_break": 0.6497804103837548,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w050_ov50_accgyr_hp03__hpdef",
+   "score": 0.5440577431998187,
+   "score_std": 0.09154749483889502,
+   "tie_break": 0.6509909298536137,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w050_ov25_accgyr_hp03__hpdef",
+   "score": 0.541308719920749,
+   "score_std": 0.08103822728576356,
+   "tie_break": 0.651026097836458,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w050_ov00_accgyr_raw__hpdef",
+   "score": 0.5401337110651018,
+   "score_std": 0.05096716820237567,
+   "tie_break": 0.6628418512244907,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w100_ov00_accgyr_hp03__hpdef",
+   "score": 0.539860839492909,
+   "score_std": 0.0263267159390881,
+   "tie_break": 0.7318988790828489,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w100_ov00_acc_raw__hpdef",
+   "score": 0.537932002049858,
+   "score_std": 0.03642201470166205,
+   "tie_break": 0.6807043980429676,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w075_ov50_accgyr_raw__hpdef",
+   "score": 0.5370871485238965,
+   "score_std": 0.04392010316640749,
+   "tie_break": 0.677139731575139,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w075_ov50_acc_raw__hpdef",
+   "score": 0.536666016777911,
+   "score_std": 0.09016660225668756,
+   "tie_break": 0.6202976735924576,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w075_ov75_accgyr_hp03__hpdef",
+   "score": 0.5339626469277587,
+   "score_std": 0.04287946820031223,
+   "tie_break": 0.6569837912220796,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w100_ov00_acc_hp03__hpdef",
+   "score": 0.529060026413486,
+   "score_std": 0.03965091268969429,
+   "tie_break": 0.6924074154462536,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w050_ov50_acc_hp03__hpdef",
+   "score": 0.52749206682359,
+   "score_std": 0.07657628930200955,
+   "tie_break": 0.6281965187245612,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w075_ov25_accgyr_hp03__hpdef",
+   "score": 0.5274766277095504,
+   "score_std": 0.03791519923291656,
+   "tie_break": 0.6572496658307179,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w100_ov00_accgyr_raw__hpdef",
+   "score": 0.5270325915021151,
+   "score_std": 0.0352770581722686,
+   "tie_break": 0.7066605593503845,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w100_ov25_acc_hp03__hpdef",
+   "score": 0.5226565744612045,
+   "score_std": 0.06503875344583955,
+   "tie_break": 0.6521783852148277,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w050_ov75_accgyr_raw__hpdef",
+   "score": 0.5218178053556599,
+   "score_std": 0.04661668455550302,
+   "tie_break": 0.6242173653666097,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w075_ov00_accgyr_hp03__hpdef",
+   "score": 0.5195755205829833,
+   "score_std": 0.10015995637328311,
+   "tie_break": 0.728401910621214,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w075_ov25_acc_raw__hpdef",
+   "score": 0.5193270617856676,
+   "score_std": 0.07533318887533767,
+   "tie_break": 0.6188023253315583,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w050_ov00_acc_hp03__hpdef",
+   "score": 0.5161744637385736,
+   "score_std": 0.10679325905349069,
+   "tie_break": 0.6320425256912948,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w075_ov75_acc_raw__hpdef",
+   "score": 0.5148247856307794,
+   "score_std": 0.06467884491489591,
+   "tie_break": 0.6211527152690929,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w075_ov00_accgyr_raw__hpdef",
+   "score": 0.5137798792919738,
+   "score_std": 0.08127174818548992,
+   "tie_break": 0.7137018187210326,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w050_ov75_acc_hp03__hpdef",
+   "score": 0.512290303464335,
+   "score_std": 0.0762644302027742,
+   "tie_break": 0.6270757625022595,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w050_ov50_accgyr_raw__hpdef",
+   "score": 0.5110642641896902,
+   "score_std": 0.04190081988763243,
+   "tie_break": 0.6234941323352259,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w050_ov25_acc_hp03__hpdef",
+   "score": 0.5088945605205114,
+   "score_std": 0.09280057291217997,
+   "tie_break": 0.6284552883286,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w050_ov00_accgyr_hp03__hpdef",
+   "score": 0.5088678777588295,
+   "score_std": 0.08514079867127931,
+   "tie_break": 0.6490681865502426,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w100_ov00_accgyr_hp03__hpdef",
+   "score": 0.5082757913633256,
+   "score_std": 0.02321532876080683,
+   "tie_break": 0.6967652904820564,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w075_ov50_accgyr_hp03__hpdef",
+   "score": 0.50741148556144,
+   "score_std": 0.03726040058858354,
+   "tie_break": 0.6568511450675875,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w050_ov25_accgyr_raw__hpdef",
+   "score": 0.5027297007424,
+   "score_std": 0.054867469938650874,
+   "tie_break": 0.623997988672662,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w100_ov25_acc_raw__hpdef",
+   "score": 0.5015798928313012,
+   "score_std": 0.05113389435101404,
+   "tie_break": 0.6311229501384533,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w075_ov00_accgyr_raw__hpdef",
+   "score": 0.5000016890963849,
+   "score_std": 0.11107773083489172,
+   "tie_break": 0.7145256186770447,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w075_ov75_acc_hp03__hpdef",
+   "score": 0.49897591223413995,
+   "score_std": 0.057098441174691046,
+   "tie_break": 0.6114579682275108,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w050_ov50_acc_raw__hpdef",
+   "score": 0.4950326585213795,
+   "score_std": 0.054022985049566,
+   "tie_break": 0.5810978563967983,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w075_ov25_acc_hp03__hpdef",
+   "score": 0.49495757678291114,
+   "score_std": 0.05380159576366898,
+   "tie_break": 0.6119122541397068,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w075_ov50_acc_hp03__hpdef",
+   "score": 0.4934078889383282,
+   "score_std": 0.05328896995540965,
+   "tie_break": 0.6134785848237622,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w050_ov00_accgyr_raw__hpdef",
+   "score": 0.491413467416099,
+   "score_std": 0.052095998901961475,
+   "tie_break": 0.6212351151331316,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w100_ov00_acc_raw__hpdef",
+   "score": 0.482790075947174,
+   "score_std": 0.021032629398634876,
+   "tie_break": 0.6558687431097977,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w050_ov75_accgyr_hp03__hpdef",
+   "score": 0.4818317970368349,
+   "score_std": 0.030425086077271277,
+   "tie_break": 0.5955859527377764,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w100_ov50_acc_hp03__hpdef",
+   "score": 0.48002331089967654,
+   "score_std": 0.02308536255498731,
+   "tie_break": 0.5776846929570486,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w075_ov25_acc_raw__hpdef",
+   "score": 0.47214098724563386,
+   "score_std": 0.046602697741678814,
+   "tie_break": 0.5882794591509446,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w075_ov00_acc_hp03__hpdef",
+   "score": 0.47198480570802204,
+   "score_std": 0.1113950282479689,
+   "tie_break": 0.6693428492343357,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w075_ov00_acc_raw__hpdef",
+   "score": 0.4713008233557264,
+   "score_std": 0.08889755129409352,
+   "tie_break": 0.6377869721719577,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w075_ov75_acc_raw__hpdef",
+   "score": 0.47117772186329293,
+   "score_std": 0.05330307120424158,
+   "tie_break": 0.5864489036181085,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w100_ov75_acc_hp03__hpdef",
+   "score": 0.4701683385385563,
+   "score_std": 0.029649459875012454,
+   "tie_break": 0.5774531050174624,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w050_ov50_accgyr_hp03__hpdef",
+   "score": 0.4700645394257775,
+   "score_std": 0.028610149952095588,
+   "tie_break": 0.5956137088428589,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w050_ov25_acc_raw__hpdef",
+   "score": 0.469202447613499,
+   "score_std": 0.04506794213709471,
+   "tie_break": 0.5799174169782403,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w075_ov00_accgyr_hp03__hpdef",
+   "score": 0.46841891563622057,
+   "score_std": 0.09053689220733521,
+   "tie_break": 0.7047036682560219,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w050_ov50_acc_raw__hpdef",
+   "score": 0.4653851358877337,
+   "score_std": 0.0680687800519492,
+   "tie_break": 0.5650297104459739,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w050_ov75_acc_raw__hpdef",
+   "score": 0.4652762275641856,
+   "score_std": 0.03632530863715892,
+   "tie_break": 0.5793365516249532,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs100_w050_ov00_acc_raw__hpdef",
+   "score": 0.46513205435966287,
+   "score_std": 0.07593226892659907,
+   "tie_break": 0.5778606869229156,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w050_ov25_accgyr_hp03__hpdef",
+   "score": 0.46087832499294135,
+   "score_std": 0.03376172056544631,
+   "tie_break": 0.5935633436960056,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w050_ov00_accgyr_hp03__hpdef",
+   "score": 0.4531947319909801,
+   "score_std": 0.060068097378133206,
+   "tie_break": 0.5941564521219704,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w075_ov00_accgyr_raw__hpdef",
+   "score": 0.44987679006791076,
+   "score_std": 0.06998798037838644,
+   "tie_break": 0.6815740045832989,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w050_ov75_acc_raw__hpdef",
+   "score": 0.44985058130009303,
+   "score_std": 0.049839927044366295,
+   "tie_break": 0.5659842759929642,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w050_ov25_acc_raw__hpdef",
+   "score": 0.44798986794058737,
+   "score_std": 0.04288567234940154,
+   "tie_break": 0.5654199410706283,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w100_ov00_acc_raw__hpdef",
+   "score": 0.44745919531393746,
+   "score_std": 0.03264707106647581,
+   "tie_break": 0.6345012238111076,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w075_ov50_acc_raw__hpdef",
+   "score": 0.443675685946379,
+   "score_std": 0.04752256692508042,
+   "tie_break": 0.5862805302812529,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w100_ov00_acc_hp03__hpdef",
+   "score": 0.44182848660073204,
+   "score_std": 0.011556287506251369,
+   "tie_break": 0.644132358373173,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w050_ov00_acc_raw__hpdef",
+   "score": 0.4334425174570777,
+   "score_std": 0.07585643223726915,
+   "tie_break": 0.564460721214711,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w050_ov50_acc_hp03__hpdef",
+   "score": 0.42675455100002385,
+   "score_std": 0.04880726202042917,
+   "tie_break": 0.5573485812940507,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w100_ov25_acc_hp03__hpdef",
+   "score": 0.4266554114476169,
+   "score_std": 0.026650853987213896,
+   "tie_break": 0.5759213239945756,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w050_ov50_acc_raw__hpdef",
+   "score": 0.42478738096220997,
+   "score_std": 0.0633059709098302,
+   "tie_break": 0.5336905337108253,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w075_ov00_acc_raw__hpdef",
+   "score": 0.42430830046192264,
+   "score_std": 0.1052078051075929,
+   "tie_break": 0.6234344112705907,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w050_ov75_acc_hp03__hpdef",
+   "score": 0.4221327786287095,
+   "score_std": 0.041907309797890806,
+   "tie_break": 0.5570644285144651,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w050_ov75_acc_raw__hpdef",
+   "score": 0.4193314983347407,
+   "score_std": 0.05662783630805949,
+   "tie_break": 0.5339011172600309,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w075_ov00_accgyr_hp03__hpdef",
+   "score": 0.413450666352657,
+   "score_std": 0.05318998287692271,
+   "tie_break": 0.6584018387939646,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w050_ov25_acc_hp03__hpdef",
+   "score": 0.41305072911632196,
+   "score_std": 0.04059306859576735,
+   "tie_break": 0.5569056960095181,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w050_ov00_acc_hp03__hpdef",
+   "score": 0.41225641307163957,
+   "score_std": 0.08919228405255716,
+   "tie_break": 0.5569895122021409,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w050_ov00_acc_raw__hpdef",
+   "score": 0.40848808120613517,
+   "score_std": 0.08244466675705821,
+   "tie_break": 0.5321236402315422,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w050_ov25_acc_raw__hpdef",
+   "score": 0.39937613513608206,
+   "score_std": 0.046139401120561495,
+   "tie_break": 0.5315282923142849,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w075_ov75_acc_hp03__hpdef",
+   "score": 0.3945157406662194,
+   "score_std": 0.03719942757517376,
+   "tie_break": 0.5412259935886519,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w075_ov25_acc_hp03__hpdef",
+   "score": 0.39177540092353563,
+   "score_std": 0.03258054255195837,
+   "tie_break": 0.5397206621596391,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w075_ov00_acc_hp03__hpdef",
+   "score": 0.38636664001956994,
+   "score_std": 0.07818316592069706,
+   "tie_break": 0.6177037393966649,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w100_ov00_acc_hp03__hpdef",
+   "score": 0.37646713562120776,
+   "score_std": 0.01687133992334792,
+   "tie_break": 0.5731740000755619,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w075_ov00_acc_raw__hpdef",
+   "score": 0.3681176301851556,
+   "score_std": 0.06231575418024608,
+   "tie_break": 0.587123254632559,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w075_ov50_acc_hp03__hpdef",
+   "score": 0.36729752324490367,
+   "score_std": 0.03123660226338171,
+   "tie_break": 0.53941466073561,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w050_ov75_acc_hp03__hpdef",
+   "score": 0.33737055488531126,
+   "score_std": 0.022480284237975417,
+   "tie_break": 0.48551907479637996,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w050_ov50_acc_hp03__hpdef",
+   "score": 0.33313034421249915,
+   "score_std": 0.018161117006887065,
+   "tie_break": 0.4836072561416609,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w050_ov25_acc_hp03__hpdef",
+   "score": 0.32070912056946504,
+   "score_std": 0.024848137297033737,
+   "tie_break": 0.4840230311205344,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w050_ov00_acc_hp03__hpdef",
+   "score": 0.3149019148277828,
+   "score_std": 0.03904111769331366,
+   "tie_break": 0.4841369350711868,
+   "n_runs": 3
+  },
+  {
+   "config_key": "cnn_bilstm__fs20_w075_ov00_acc_hp03__hpdef",
+   "score": 0.29797450523644814,
+   "score_std": 0.042414385645954567,
+   "tie_break": 0.5390210685982856,
+   "n_runs": 3
+  }
+ ]
+}

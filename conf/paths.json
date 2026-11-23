@@ -1,0 +1,8 @@
+{
+  "data": "data",
+  "gestures": "data/labeled_output_gestures",
+  "lab_sessions": "data/labeled_output",
+  "ingesture": "data/third_party/InGesture/InGesture Dataset",
+  "wisdm": "data/third_party/WISDM2019/wisdm-dataset",
+  "outputs": "outputs"
+}

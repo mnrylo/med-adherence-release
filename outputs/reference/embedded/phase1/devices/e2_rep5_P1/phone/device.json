@@ -1,0 +1,18 @@
+{
+ "manufacturer": "samsung",
+ "model": "SM-S918B",
+ "device": "dm3q",
+ "hardware": "qcom",
+ "board": "kalama",
+ "soc_manufacturer": "QTI",
+ "soc_model": "SM8550",
+ "sdk": 36,
+ "release": "16",
+ "abis": [
+  "arm64-v8a",
+  "armeabi-v7a",
+  "armeabi"
+ ],
+ "cores": 8,
+ "max_memory_mb": 256
+}

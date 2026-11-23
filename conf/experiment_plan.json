@@ -1,0 +1,327 @@
+{
+  "title": "Experiment plan: gesture recognition and medication intake detection",
+  "glossary": "GLOSSARY.md",
+  "common_protocol": {
+    "datasets": {
+      "annotated_gestures": {
+        "description": "Isolated G1–G4 gesture trials (Subject01–15), one gesture per trial",
+        "path": "data/labeled_output_gestures",
+        "use": "training and validation (composed into continuous streams)"
+      },
+      "ingesture": {
+        "description": "Continuous 10-min recordings; drinking → G4, everything else → G5",
+        "path": "data/third_party/InGesture/InGesture Dataset",
+        "use": "daily-life negatives (G5) for training; held-out participants for false alarms per hour"
+      },
+      "wisdm": {
+        "description": "Daily activities (WISDM 2019); everything → G5, eating treated as rest",
+        "path": "data/third_party/WISDM2019/wisdm-dataset",
+        "use": "daily-life negatives (G5) for training; held-out participants for false alarms per hour"
+      },
+      "annotated_sequences": {
+        "description": "Lab protocol sessions; different people from annotated_gestures",
+        "path": "data/labeled_output",
+        "use": "BLIND TEST — never used for training or for selecting a configuration"
+      }
+    },
+    "splits": {
+      "folds": "3 subject-wise folds over annotated_gestures (validation subjects never seen in training)",
+      "seeds": {
+        "screening_stages_A_C": [
+          0
+        ],
+        "stage_B_and_finalists": [
+          0,
+          1,
+          2
+        ],
+        "note": "every number compared across configurations is a mean over 3 folds × 3 seeds; screening uses 3 folds × 1 seed"
+      },
+      "external": "InGesture/WISDM split by participant: train / calibration (25 %) / test (20 %), split_seed 42",
+      "validation_streams": "held-out gesture subjects composed inside external calibration participants, worlds W3int + W4long, identical for every configuration of every experiment"
+    },
+    "selection_rule": {
+      "metric": "timeline.seg_f1_25",
+      "tie_breaker": "window.macro_f1",
+      "set": "validation",
+      "note": "The annotated sequences are evaluated once per frozen configuration and never drive a choice."
+    },
+    "fixed_unless_stated": {
+      "classes": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5"
+      ],
+      "timeline_grid_hz": 10,
+      "augmentation": "rotation ±30°, amplitude 0.8–1.25, time warp 0.8–1.25, noise, gyro bias, 5 % drop (conf/training.json)",
+      "optimizer": "AdamW, 300 warmup steps, label smoothing 0.05",
+      "training_steps": "fixed per run regardless of overlap, so 75 % overlap (4× more windows) is not favoured by more updates",
+      "label_mode": "hard",
+      "training_steps_per_run": 6000,
+      "default_hyperparameters_hpdef": {
+        "lr": 0.001,
+        "dropout": 0.15,
+        "conv_filters": 128,
+        "lstm_units": 64,
+        "kernel_size": 5,
+        "batch_size": 512
+      },
+      "window_label": "label of the window's centre sample (as in training)"
+    },
+    "metrics": {
+      "window": [
+        "precision per class",
+        "recall per class",
+        "F1 per class",
+        "macro F1",
+        "accuracy",
+        "confusion matrix"
+      ],
+      "gesture_timeline": [
+        "precision/recall/F1 per class",
+        "macro F1",
+        "accuracy",
+        "segmental F1@10/@25/@50"
+      ],
+      "gesture_order": [
+        "order exact match",
+        "order edit distance"
+      ],
+      "intake": [
+        "sensitivity",
+        "specificity",
+        "balanced accuracy",
+        "false alarms per hour (InGesture/WISDM test)"
+      ],
+      "timeline_without_postprocessing": "window probabilities averaged onto the 10 Hz grid (each frame averages the windows covering it), argmax, then G1–G4 segments shorter than 0.5 × the 10th percentile of that gesture's duration in the training streams are given to the neighbour with the higher mean probability (E1, E2)",
+      "timeline_with_postprocessing": "HMM/HSMM decoded timeline (E3)",
+      "reporting": "mean ± std over folds × seeds; paired Wilcoxon tests between configurations"
+    }
+  },
+  "experiments": [
+    {
+      "id": "E1",
+      "slug": "E1_gestures_only",
+      "name": "Gesture classifier trained on annotated gestures only",
+      "question": "Which model and signal configuration best recognises the individual gestures when training uses only the protocol gestures?",
+      "train_datasets": [
+        "annotated_gestures"
+      ],
+      "test_dataset": "annotated_sequences",
+      "factors": {
+        "model": [
+          "cnn",
+          "cnn_lstm",
+          "cnn_bilstm"
+        ],
+        "fs_hz": [
+          20,
+          50,
+          100
+        ],
+        "window_s": [
+          0.5,
+          0.75,
+          1.0,
+          2.0,
+          5.0
+        ],
+        "overlap": [
+          0.0,
+          0.25,
+          0.5,
+          0.75
+        ],
+        "signals": [
+          "acc",
+          "acc_gyr"
+        ],
+        "filter": [
+          "hp0.3",
+          "none"
+        ]
+      },
+      "hyperparameter_grid": {
+        "lr": [
+          0.001,
+          0.0003
+        ],
+        "dropout": [
+          0.2,
+          0.5
+        ],
+        "conv_filters": [
+          32,
+          64
+        ],
+        "lstm_units": [
+          64,
+          128
+        ],
+        "kernel_size": [
+          3,
+          5
+        ],
+        "batch_size": [
+          256,
+          512
+        ]
+      },
+      "grid_size": "3 models × 3 fs × 5 windows × 4 overlaps × 2 signals × 2 filters = 720 configurations; × 3 folds × 3 seeds = 6480 trainings before the 64-point hyperparameter grid (≈ 415 000). Run in stages.",
+      "stages": {
+        "A_signal": {
+          "varies": [
+            "fs_hz",
+            "window_s",
+            "overlap",
+            "signals",
+            "filter"
+          ],
+          "fixed": {
+            "model": "cnn_bilstm",
+            "hyperparameters": "default"
+          },
+          "n_configs": 240,
+          "advance": "top 5 by selection_rule",
+          "replicates": "3 folds × seed 0"
+        },
+        "B_model": {
+          "varies": [
+            "model"
+          ],
+          "fixed": {
+            "signal": "top 5 from stage A",
+            "hyperparameters": "default"
+          },
+          "n_configs": 15,
+          "advance": "top 3 (model, signal) by selection_rule",
+          "replicates": "3 folds × seeds 0–2"
+        },
+        "C_hyperparameters": {
+          "varies": [
+            "hyperparameter_grid"
+          ],
+          "fixed": {
+            "model_and_signal": "top 3 from stage B"
+          },
+          "n_configs": "≤ 192 (the CNN has no LSTM: its 32 duplicate points are skipped)",
+          "advance": "top 3 among the grid points and the default-hyperparameter B finalists",
+          "replicates": "3 folds × seed 0"
+        },
+        "F_finalists": {
+          "what": "the 3 configurations chosen in C, completed to 3 folds × seeds 0–2",
+          "advance": "→ E3"
+        }
+      },
+      "postprocessing": "none",
+      "goal": "Window-level precision, recall, F1 and accuracy per gesture; Gesture Timeline segmental F1; Gesture Order exact match",
+      "notes": [
+        "Without external negatives, rest between gestures comes from the composed rest gaps, so the G5 class is still represented."
+      ],
+      "training_world": "W0all: composed annotated gestures, all 11 scenario recipes, rest (G5 trials of the gesture folder) between gestures, no daily activity",
+      "training_mix": {
+        "composed_gestures_centred_on_a_gesture": 0.55,
+        "composed_streams_any_window": 0.45
+      }
+    },
+    {
+      "id": "E2",
+      "slug": "E2_daily_negatives",
+      "name": "Gesture classifier with daily-life negatives (G5)",
+      "question": "Does adding daily-life movement (InGesture, WISDM) as G5 improve gesture recognition and reduce confusion with ordinary activity?",
+      "train_datasets": [
+        "annotated_gestures",
+        "ingesture",
+        "wisdm"
+      ],
+      "test_dataset": "annotated_sequences",
+      "factors": "same as E1 (same grid, folds and seeds, paired E1 × E2 comparison)",
+      "hyperparameter_grid": "same as E1",
+      "stages": "same as E1",
+      "training_mix": {
+        "composed_gestures_centred_on_a_gesture": 0.4,
+        "composed_streams_any_window": 0.3,
+        "ingesture": 0.15,
+        "wisdm": 0.15
+      },
+      "postprocessing": "none",
+      "goal": "Same as E1, plus G5 F1 and the rate of G1–G4 windows per hour on the InGesture/WISDM test participants",
+      "notes": [
+        "InGesture and WISDM have their own sampling rates; resample to each fs in the grid."
+      ],
+      "training_world": "W3int: gestures interleaved with daily activity of external training participants"
+    },
+    {
+      "id": "E3",
+      "slug": "E3_postprocessing",
+      "name": "Temporal post-processing (HMM, HSMM) and intake decision",
+      "question": "Does HMM/HSMM post-processing on top of the best classifiers reconstruct the Gesture Timeline and Gesture Order and decide intake with few false alarms?",
+      "train_datasets": "none — reuses the saved window probabilities of the selected E1/E2 runs (no retraining)",
+      "test_dataset": "annotated_sequences, alone and embedded in daily activity of held-out external participants (test_wild)",
+      "models": {
+        "from_E1": "top 3 from E1 stage C",
+        "from_E2": "top 3 from E2 stage C",
+        "selection": "selection_rule (timeline.seg_f1_25 on validation)",
+        "short_window_references": "best 0.75 s and 1 s configuration of E1 and of E2, each taken through B (3 models) -> C (hyperparameter grid) -> F (3 seeds) like the finalists (src/thesis/extra_windows.py, outputs/thesis/index/selection/<exp>_w<win>_<stage>.json); the best of each track is decoded in E3 with role 'window_ref'"
+      },
+      "decoders": [
+        "none (E1/E2 timeline rule)",
+        "hmm",
+        "hsmm"
+      ],
+      "intake_decision": [
+        "LLR intake vs. no-intake (phased HMM, G3 mandatory)",
+        "threshold calibrated on validation under a false-alarm budget"
+      ],
+      "hyperparameter_grid": {
+        "self_transition": [
+          0.8,
+          0.9,
+          0.95
+        ],
+        "min_duration_fraction": [
+          0.3,
+          0.5,
+          0.7
+        ],
+        "emission_temperature": [
+          0.5,
+          1.0,
+          2.0,
+          4.0
+        ],
+        "fa_budget_per_hour": [
+          0.5,
+          1.0
+        ]
+      },
+      "goal": "Window, Gesture Timeline and Gesture Order metrics after decoding; intake sensitivity, specificity and false alarms per hour",
+      "notes": [
+        "fs, window, overlap and signals are fixed by the 6 selected models; E3 only sweeps the post-processing.",
+        "Configurations trained with 75 % overlap are also decoded from every second window (50 % stride)."
+      ],
+      "implementation": {
+        "script": "src/thesis/postproc.py",
+        "decoding_grid": "10 Hz Gesture Timeline grid; emissions log(p/prior) per frame / temperature",
+        "self_transition": "probability per second that rest (G5) continues: 0.8/0.9/0.95 = 5/10/20 s expected rest (HMM only)",
+        "min_duration_fraction": "HMM chain length = fraction x 10th percentile of class duration; HSMM: relabel pass with these minima (0 = none)",
+        "overlap_variant": "ov50 = every second window of the 75 % predictions (same model, 50 % stride)",
+        "durations": "fitted on the validation streams' 10 Hz labels (training streams are stored only on the window grid)",
+        "intake_decisions": [
+          "g3 (G3 segment in the decoded timeline)",
+          "g2_g3 (a G2 segment followed later by a G3 segment)",
+          "phased LLR on a 2 Hz grid, threshold per replicate on val + external calibration under fa_budget_per_hour"
+        ],
+        "selection": "grid point per (configuration, decoder) by mean val timeline.seg_f1_25, then best decoder per configuration",
+        "design_choices": [
+          "emission_temperature grid extended with 4.0",
+          "rule_g2_g3 is an intake decision, not a timeline decoder",
+          "the top 3 configurations per experiment are taken from stage F",
+          "short-window tracks (0.75 s, 1 s) run through the whole pipeline"
+        ]
+      }
+    }
+  ]
+}

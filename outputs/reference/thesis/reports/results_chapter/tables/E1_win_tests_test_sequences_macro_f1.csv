@@ -1,0 +1,6 @@
+,factor,test,blocks,effect,p
+0,window_s,Friedman,48,Kendall W = 0.96; best mean rank (highest): 5.0,1.1767208622486195e-38
+1,overlap,Friedman,60,Kendall W = 0.26; best mean rank (highest): 0 %,3.120554567520902e-10
+2,filter,Wilcoxon,120,raw − high-pass 0.3 Hz: +1.4 pts (wins 83 %),7.609014731629758e-12
+3,fs_hz,Friedman,80,Kendall W = 0.01; best mean rank (highest): 20,0.4549808267181632
+4,signals,Wilcoxon,120,acc+gyr − acc: +5.4 pts (wins 98 %),2.126529093599547e-21

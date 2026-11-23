@@ -1,0 +1,37 @@
+{
+ "experiment": "E1",
+ "stage": "F",
+ "created": "2026-10-18T16:00:19",
+ "rule": "mean val.timeline.seg_f1_25 over replicates (validation), tie-break val.window.macro_f1",
+ "note": "finalists with 3 folds \u00d7 3 seeds; these go to E3",
+ "n_candidates": 3,
+ "n_scored": 3,
+ "advanced": [
+  "cnn_bilstm__fs50_w500_ov75_acc_raw__hp14",
+  "cnn_bilstm__fs50_w500_ov75_acc_raw__hp30",
+  "cnn_bilstm__fs50_w500_ov75_acc_raw__hp21"
+ ],
+ "ranking": [
+  {
+   "config_key": "cnn_bilstm__fs50_w500_ov75_acc_raw__hp14",
+   "score": 0.39820347038549275,
+   "score_std": 0.10734378292892047,
+   "tie_break": 0.3971380780359259,
+   "n_runs": 9
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w500_ov75_acc_raw__hp30",
+   "score": 0.3830471028214754,
+   "score_std": 0.08826645512833955,
+   "tie_break": 0.3940336543436583,
+   "n_runs": 9
+  },
+  {
+   "config_key": "cnn_bilstm__fs50_w500_ov75_acc_raw__hp21",
+   "score": 0.3820901794976066,
+   "score_std": 0.09193094601579702,
+   "tie_break": 0.38905248567163486,
+   "n_runs": 9
+  }
+ ]
+}

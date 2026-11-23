@@ -1,0 +1,78 @@
+{
+ "stage": "E3",
+ "rule": "max mean val.timeline.seg_f1_25, tie-break val.timeline.macro_f1",
+ "per_config": {
+  "E1/cnn__fs100_w100_ov50_acc_raw__hp03": {
+   "decoder_key": "hmm__ov50_st080_md070_t400",
+   "val.timeline.seg_f1_25": 0.41727522348432744,
+   "val.timeline.macro_f1": 0.38774859420656743
+  },
+  "E1/cnn_bilstm__fs100_w075_ov75_acc_raw__hp25": {
+   "decoder_key": "hmm__ov50_st090_md070_t400",
+   "val.timeline.seg_f1_25": 0.46877761139499746,
+   "val.timeline.macro_f1": 0.40619844893846074
+  },
+  "E1/cnn_bilstm__fs50_w500_ov75_acc_raw__hp14": {
+   "decoder_key": "hmm__ov75_st080_md070_t100",
+   "val.timeline.seg_f1_25": 0.45006880983006453,
+   "val.timeline.macro_f1": 0.4254397771676521
+  },
+  "E1/cnn_bilstm__fs50_w500_ov75_acc_raw__hp21": {
+   "decoder_key": "hmm__ov75_st080_md050_t100",
+   "val.timeline.seg_f1_25": 0.43725917976383105,
+   "val.timeline.macro_f1": 0.4233392986601272
+  },
+  "E1/cnn_bilstm__fs50_w500_ov75_acc_raw__hp30": {
+   "decoder_key": "hmm__ov75_st095_md030_t100",
+   "val.timeline.seg_f1_25": 0.4491495108374735,
+   "val.timeline.macro_f1": 0.4299211629741746
+  },
+  "E2/cnn__fs100_w075_ov75_accgyr_hp03__hpdef": {
+   "decoder_key": "hsmm__ov50_md030_t400",
+   "val.timeline.seg_f1_25": 0.831179732246547,
+   "val.timeline.macro_f1": 0.8158776468375487
+  },
+  "E2/cnn__fs100_w100_ov50_accgyr_hp03__hpdef": {
+   "decoder_key": "hsmm__ov50_md030_t400",
+   "val.timeline.seg_f1_25": 0.8318550327434197,
+   "val.timeline.macro_f1": 0.8081808520219084
+  },
+  "E2/cnn_bilstm__fs100_w200_ov75_accgyr_hp03__hp05": {
+   "decoder_key": "hmm__ov75_st095_md030_t200",
+   "val.timeline.seg_f1_25": 0.8448694457060876,
+   "val.timeline.macro_f1": 0.792745121844639
+  },
+  "E2/cnn_bilstm__fs100_w200_ov75_accgyr_hp03__hp15": {
+   "decoder_key": "hmm__ov75_st080_md030_t200",
+   "val.timeline.seg_f1_25": 0.8430246144907403,
+   "val.timeline.macro_f1": 0.7885078871365657
+  },
+  "E2/cnn_bilstm__fs100_w200_ov75_accgyr_hp03__hp31": {
+   "decoder_key": "hmm__ov75_st095_md030_t200",
+   "val.timeline.seg_f1_25": 0.8388550387306615,
+   "val.timeline.macro_f1": 0.7890481920471626
+  }
+ },
+ "per_experiment": {
+  "E1": {
+   "config_key": "cnn_bilstm__fs50_w500_ov75_acc_raw__hp14",
+   "decoder_key": "hmm__ov75_st080_md070_t100",
+   "val.timeline.seg_f1_25": 0.45006880983006453,
+   "val.timeline.macro_f1": 0.4254397771676521
+  },
+  "E2": {
+   "config_key": "cnn_bilstm__fs100_w200_ov75_accgyr_hp03__hp05",
+   "decoder_key": "hmm__ov75_st095_md030_t200",
+   "val.timeline.seg_f1_25": 0.8448694457060876,
+   "val.timeline.macro_f1": 0.792745121844639
+  }
+ },
+ "note": "per_experiment and overall: finalists only",
+ "overall": {
+  "experiment": "E2",
+  "config_key": "cnn_bilstm__fs100_w200_ov75_accgyr_hp03__hp05",
+  "decoder_key": "hmm__ov75_st095_md030_t200",
+  "val.timeline.seg_f1_25": 0.8448694457060876,
+  "val.timeline.macro_f1": 0.792745121844639
+ }
+}

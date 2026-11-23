@@ -1,0 +1,46 @@
+{
+ "sensor_columns": [
+  "acc_x",
+  "acc_y",
+  "acc_z",
+  "gyr_x",
+  "gyr_y",
+  "gyr_z"
+ ],
+ "units": {
+  "acc": "g",
+  "gyr": "deg/s"
+ },
+ "raw_units_in_csv": {
+  "acc": "m/s^2",
+  "gyr": "deg/s"
+ },
+ "fs_hz": 100.0,
+ "resample_lowpass_hz": 40.0,
+ "filter": {
+  "type": "highpass_acc",
+  "cutoff": 0.3
+ },
+ "window_samples": 200,
+ "window_s": 2.0,
+ "stride_samples": 50,
+ "overlap": 0.75,
+ "channels_used": [
+  "acc_x",
+  "acc_y",
+  "acc_z",
+  "gyr_x",
+  "gyr_y",
+  "gyr_z"
+ ],
+ "input_layout": "(batch, 6, window_samples), all 6 channels; the model selects its channels",
+ "input_scale": "acc x1, gyr x1/100 (inside the model)",
+ "classes": [
+  "G1",
+  "G2",
+  "G3",
+  "G4",
+  "G5"
+ ],
+ "window_label": "label of the centre sample"
+}

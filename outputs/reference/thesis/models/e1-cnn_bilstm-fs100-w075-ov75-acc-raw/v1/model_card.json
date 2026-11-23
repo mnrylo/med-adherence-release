@@ -1,0 +1,296 @@
+{
+ "model_name": "e1-cnn_bilstm-fs100-w075-ov75-acc-raw",
+ "version": 1,
+ "role": "window_ref",
+ "purpose": "Medication-intake gesture recognition from wrist IMU (G1 open container, G2 pick up pill, G3 pill to mouth, G4 drink water, G5 rest/other); Gesture Timeline, Gesture Order and intake decision after decoding.",
+ "config_key": "cnn_bilstm__fs100_w075_ov75_acc_raw__hp25",
+ "experiment": "E1",
+ "source_runs": [
+  "E1_gestures_only/cnn_bilstm__fs100_w075_ov75_acc_raw__hp25/f0_s0",
+  "E1_gestures_only/cnn_bilstm__fs100_w075_ov75_acc_raw__hp25/f0_s1",
+  "E1_gestures_only/cnn_bilstm__fs100_w075_ov75_acc_raw__hp25/f0_s2",
+  "E1_gestures_only/cnn_bilstm__fs100_w075_ov75_acc_raw__hp25/f1_s0",
+  "E1_gestures_only/cnn_bilstm__fs100_w075_ov75_acc_raw__hp25/f1_s1",
+  "E1_gestures_only/cnn_bilstm__fs100_w075_ov75_acc_raw__hp25/f1_s2",
+  "E1_gestures_only/cnn_bilstm__fs100_w075_ov75_acc_raw__hp25/f2_s0",
+  "E1_gestures_only/cnn_bilstm__fs100_w075_ov75_acc_raw__hp25/f2_s1",
+  "E1_gestures_only/cnn_bilstm__fs100_w075_ov75_acc_raw__hp25/f2_s2"
+ ],
+ "deployment_run": "E1_gestures_only/cnn_bilstm__fs100_w075_ov75_acc_raw__hp25/fall_s0",
+ "deployment_steps": 3000,
+ "selection": {
+  "experiment": "E1",
+  "stage": "short-window track E1_w075 (A -> B -> C -> F)",
+  "rule": "max mean val.timeline.seg_f1_25, tie-break val window/timeline macro F1",
+  "selection_file": "index/selection/E1_w075_F.json"
+ },
+ "input": {
+  "fs_hz": 100.0,
+  "window_s": 0.75,
+  "overlap": 0.75,
+  "channels": [
+   "acc_x",
+   "acc_y",
+   "acc_z"
+  ],
+  "units": {
+   "acc": "g",
+   "gyr": "deg/s"
+  },
+  "filter": "none"
+ },
+ "output": {
+  "classes": [
+   "G1",
+   "G2",
+   "G3",
+   "G4",
+   "G5"
+  ],
+  "decoder": "hmm__ov50_st090_md070_t400",
+  "intake_threshold": 4.1761231571518
+ },
+ "metrics": {
+  "val": {
+   "window.macro_f1": {
+    "mean": 0.40534784110795563,
+    "std": 0.047403757532797526
+   },
+   "window.accuracy": {
+    "mean": 0.49599796476994196,
+    "std": 0.04294297370070976
+   },
+   "window.recall.G3": {
+    "mean": 0.8209261316009353,
+    "std": 0.06657959357079209
+   },
+   "window.precision.G3": {
+    "mean": 0.05011609174738793,
+    "std": 0.010867692731838461
+   },
+   "timeline.macro_f1": {
+    "mean": 0.40619844893846074,
+    "std": 0.04748316055497061
+   },
+   "timeline.seg_f1_25": {
+    "mean": 0.46877761139499746,
+    "std": 0.0662455861318191
+   },
+   "order.exact_match": {
+    "mean": 0.12956738250855893,
+    "std": 0.025538103477157216
+   },
+   "order.edit_distance": {
+    "mean": 1.2802045628256113,
+    "std": 0.16900341331439592
+   },
+   "intake_g3.balanced_accuracy": {
+    "mean": 0.5864631065330482,
+    "std": 0.020182941714815914
+   },
+   "intake_g2_g3.balanced_accuracy": {
+    "mean": 0.6210662814366587,
+    "std": 0.03161825501230433
+   },
+   "intake_llr_fa05.sensitivity": {
+    "mean": 0.05749998370135667,
+    "std": 0.04082085603019292
+   },
+   "intake_llr_fa05.specificity": {
+    "mean": 0.9901631522599266,
+    "std": 0.009353385808356138
+   },
+   "intake_llr_fa05.balanced_accuracy": {
+    "mean": 0.5238315679806417,
+    "std": 0.01664467880137428
+   },
+   "intake_llr_fa10.sensitivity": {
+    "mean": 0.10202950706383199,
+    "std": 0.07822215447500841
+   },
+   "intake_llr_fa10.specificity": {
+    "mean": 0.9825385188288414,
+    "std": 0.01577794469311739
+   },
+   "intake_llr_fa10.balanced_accuracy": {
+    "mean": 0.5422840129463367,
+    "std": 0.034614108492122625
+   }
+  },
+  "test_sequences": {
+   "window.macro_f1": {
+    "mean": 0.763171822202881,
+    "std": 0.026286860008571198
+   },
+   "window.accuracy": {
+    "mean": 0.7671330882643582,
+    "std": 0.023701864719943733
+   },
+   "window.recall.G3": {
+    "mean": 0.6990266299357208,
+    "std": 0.045214727574938156
+   },
+   "window.precision.G3": {
+    "mean": 0.8597484297164331,
+    "std": 0.04873399975776986
+   },
+   "timeline.macro_f1": {
+    "mean": 0.7627374801522222,
+    "std": 0.026171625382324794
+   },
+   "timeline.seg_f1_25": {
+    "mean": 0.8993879878529731,
+    "std": 0.024633298542163368
+   },
+   "order.exact_match": {
+    "mean": 0.6362471982068524,
+    "std": 0.08143158291075021
+   },
+   "order.edit_distance": {
+    "mean": 0.14102358842992846,
+    "std": 0.03493819066271345
+   },
+   "intake_g3.balanced_accuracy": {
+    "mean": 0.9460455315294026,
+    "std": 0.01765718104178299
+   },
+   "intake_g2_g3.balanced_accuracy": {
+    "mean": 0.837173579109063,
+    "std": 0.04094321576939369
+   },
+   "intake_llr_fa05.sensitivity": {
+    "mean": 0.007168458781361988,
+    "std": 0.012216569677870093
+   },
+   "intake_llr_fa05.specificity": {
+    "mean": 1.0,
+    "std": 0.0
+   },
+   "intake_llr_fa05.balanced_accuracy": {
+    "mean": 0.503584229390681,
+    "std": 0.006108284838935059
+   },
+   "intake_llr_fa10.sensitivity": {
+    "mean": 0.07731694828469018,
+    "std": 0.10082528534473004
+   },
+   "intake_llr_fa10.specificity": {
+    "mean": 1.0,
+    "std": 0.0
+   },
+   "intake_llr_fa10.balanced_accuracy": {
+    "mean": 0.538658474142345,
+    "std": 0.05041264267236501
+   }
+  },
+  "test_wild": {
+   "window.macro_f1": {
+    "mean": 0.4161912347828785,
+    "std": 0.03287218663353295
+   },
+   "window.accuracy": {
+    "mean": 0.47821767371891966,
+    "std": 0.03795207811468623
+   },
+   "window.recall.G3": {
+    "mean": 0.7227541176039031,
+    "std": 0.040934201027499784
+   },
+   "window.precision.G3": {
+    "mean": 0.04550626776335134,
+    "std": 0.004888441304960282
+   },
+   "timeline.macro_f1": {
+    "mean": 0.4163946066324201,
+    "std": 0.03282742990545958
+   },
+   "timeline.seg_f1_25": {
+    "mean": 0.5815857182345445,
+    "std": 0.0323736790192932
+   },
+   "order.exact_match": {
+    "mean": 0.08229266730707648,
+    "std": 0.02359380228782927
+   },
+   "order.edit_distance": {
+    "mean": 0.9778044615220407,
+    "std": 0.10734045984496514
+   },
+   "intake_g3.balanced_accuracy": {
+    "mean": 0.5959057071960296,
+    "std": 0.018397009853356742
+   },
+   "intake_g2_g3.balanced_accuracy": {
+    "mean": 0.7024203395171136,
+    "std": 0.04465334254102242
+   },
+   "intake_llr_fa05.sensitivity": {
+    "mean": 0.041474654377880144,
+    "std": 0.021859062167062522
+   },
+   "intake_llr_fa05.specificity": {
+    "mean": 0.9871794871794872,
+    "std": 0.01153846153846158
+   },
+   "intake_llr_fa05.balanced_accuracy": {
+    "mean": 0.5143270707786837,
+    "std": 0.007129127475159539
+   },
+   "intake_llr_fa10.sensitivity": {
+    "mean": 0.08960573476702503,
+    "std": 0.07614540190908821
+   },
+   "intake_llr_fa10.specificity": {
+    "mean": 0.9777777777777779,
+    "std": 0.015596827000764755
+   },
+   "intake_llr_fa10.balanced_accuracy": {
+    "mean": 0.5336917562724015,
+    "std": 0.031196213579486775
+   }
+  },
+  "test_external": {
+   "external.gesture_events_per_hour": {
+    "mean": 146.18039921957077,
+    "std": 11.863951841298872
+   },
+   "external.g3_events_per_hour": {
+    "mean": 61.275080604677406,
+    "std": 4.476704761639355
+   },
+   "external.llr_fa05_events_per_hour": {
+    "mean": 0.30016509079993997,
+    "std": 0.22229534790598132
+   },
+   "external.llr_fa10_events_per_hour": {
+    "mean": 0.6003301815998799,
+    "std": 0.49536729753741915
+   }
+  }
+ },
+ "headline": {
+  "window.macro_f1": 0.763171822202881,
+  "timeline.seg_f1_25": 0.8993879878529731,
+  "order.exact_match": 0.6362471982068524
+ },
+ "onnx": {
+  "opset": 17,
+  "input": "imu: float32 (batch, 6, 75)",
+  "output": "probabilities: (batch, 5)",
+  "max_abs_diff_vs_torch": 1.7881393432617188e-07
+ },
+ "limitations": [
+  "Filters (resampling low-pass, 0.3 Hz high-pass) are zero-phase over the whole stream (offline); a streaming deployment needs a causal equivalent and should be re-validated.",
+  "Trained on 15 subjects performing scripted gestures composed into synthetic streams; blind tests are other subjects' annotated sequences, alone and embedded in daily activity.",
+  "Intake thresholds are medians over fold models; recalibrate on the target population if possible.",
+  "The deployment model has no held-out validation: reported metrics come from the fold runs."
+ ],
+ "files": {
+  "weights": "model.pt",
+  "onnx": "model.onnx",
+  "preprocessing": "preprocessing.json",
+  "postprocessing": "postprocessing.json",
+  "metrics": "metrics.json"
+ },
+ "created": "2026-10-19T05:40:14"
+}
